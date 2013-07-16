@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Eam.Client.Model.TechData", "..\..\Work\EAM_2\Eam.Client\Eam.Client.Model.TechData\Eam.Client.Model.TechData.csproj", "{2330D406-6AE3-4158-91F3-70840D7ECA75}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Eam.Client.Model.TechData", "Eam.Client.Model.TechData\Eam.Client.Model.TechData.csproj", "{2330D406-6AE3-4158-91F3-70840D7ECA75}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

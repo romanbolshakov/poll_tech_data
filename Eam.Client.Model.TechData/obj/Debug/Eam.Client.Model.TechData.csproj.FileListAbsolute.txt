@@ -1,0 +1,16 @@
+D:\Documents\Projects\Work\EAM_2\Eam.Client\Eam.Client.Model.TechData\bin\Debug\Eam.Client.Model.TechData.dll
+D:\Documents\Projects\Work\EAM_2\Eam.Client\Eam.Client.Model.TechData\bin\Debug\Eam.Client.Model.TechData.pdb
+D:\Documents\Projects\Work\EAM_2\Eam.Client\Eam.Client.Model.TechData\bin\Debug\OpcDaNetB.dll
+D:\Documents\Projects\Work\EAM_2\Eam.Client\Eam.Client.Model.TechData\bin\Debug\OpcNetBase.dll
+D:\Documents\Projects\Work\EAM_2\Eam.Client\Eam.Client.Model.TechData\bin\Debug\OpcDaNetB.xml
+D:\Documents\Projects\Work\EAM_2\Eam.Client\Eam.Client.Model.TechData\bin\Debug\OpcNetBase.xml
+D:\Documents\Projects\Work\EAM_2\Eam.Client\Eam.Client.Model.TechData\obj\Debug\ResolveAssemblyReference.cache
+D:\Documents\Projects\Work\EAM_2\Eam.Client\Eam.Client.Model.TechData\obj\Debug\Eam.Client.Model.TechData.dll
+D:\Documents\Projects\Work\EAM_2\Eam.Client\Eam.Client.Model.TechData\obj\Debug\Eam.Client.Model.TechData.pdb
+D:\Documents\Projects\Github\PollTechData\Eam.Client.Model.TechData\bin\Debug\Eam.Client.Model.TechData.dll
+D:\Documents\Projects\Github\PollTechData\Eam.Client.Model.TechData\bin\Debug\Eam.Client.Model.TechData.pdb
+D:\Documents\Projects\Github\PollTechData\Eam.Client.Model.TechData\bin\Debug\OpcDaNetB.xml
+D:\Documents\Projects\Github\PollTechData\Eam.Client.Model.TechData\bin\Debug\OpcNetBase.xml
+D:\Documents\Projects\Github\PollTechData\Eam.Client.Model.TechData\obj\Debug\ResolveAssemblyReference.cache
+D:\Documents\Projects\Github\PollTechData\Eam.Client.Model.TechData\obj\Debug\Eam.Client.Model.TechData.dll
+D:\Documents\Projects\Github\PollTechData\Eam.Client.Model.TechData\obj\Debug\Eam.Client.Model.TechData.pdb
