@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Eam.Client.Model.TechData {
     /// <summary>
-    /// Collecting process Manager 
+    /// Poll process Manager 
     /// (instance of this class is avaible from external client code)
     /// This is entry point
     /// </summary>
@@ -49,7 +49,7 @@ namespace Eam.Client.Model.TechData {
         }
 
         private TDPollProcess CreateOPCPollProcess(TDOpcDataSource opcDataSource, TDDataManager currentDataManager) {
-            TDOpcPollProcess newOpcPollProcess = new TDOpcPollProcess(opcDataSource.OpcServer, currentDataManager);
+            TDOpcPollProcess newOpcPollProcess = new TDOpcPollProcess(opcDataSource.OpcServer, currentDataManager, opcDataSource.PollDelay);
             return newOpcPollProcess;
         }
 

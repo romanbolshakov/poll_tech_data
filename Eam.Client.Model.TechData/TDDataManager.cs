@@ -21,5 +21,13 @@ namespace Eam.Client.Model.TechData {
         internal void UpdateValues(CommonDataContract.PollItemValue[] pollItemValues) {
             CurrentDataBuffer.UpdateValues(pollItemValues);
         }
+
+        internal void RegisterPollItems(string[] itemNames) {
+            CurrentDataBuffer.RegisterPollItems(itemNames);
+        }
+
+        internal void RegisterPollItems(IList<CommonDataContract.PollItem> pollItems) {
+            CurrentDataBuffer.RegisterPollItems(pollItems);
+        }
     }
 }

@@ -8,9 +8,14 @@ namespace Eam.Client.Model.TechData {
     /// Class for storing technology data
     /// </summary>
     public class TDDataBuffer {
+        /// <summary>
+        /// hash-table for pair itemID(string)-PollItem(instance)
+        /// </summary>
         private System.Collections.Hashtable _hashtablePollItems;
         private DateTime _lastTimeStamp;
-
+        /// <summary>
+        /// last time stamp for checking the updates
+        /// </summary>
         public DateTime LastTimeStamp {
             get { return _lastTimeStamp; }
         }
@@ -25,6 +30,11 @@ namespace Eam.Client.Model.TechData {
             }
         }
 
+        public ICollection<CommonDataContract.PollItem> GetAllItems() {
+            return null;
+            //return _hashtablePollItems.Values;
+        }
+
         internal void UpdateValues(CommonDataContract.PollItemValue[] pollItemValues) {
             string itemID;
             CommonDataContract.PollItem currentPollItem;
@@ -37,6 +47,26 @@ namespace Eam.Client.Model.TechData {
                 currentPollItem.AddValue(currentItemValue.Timestamp, currentItemValue);
             }
             _lastTimeStamp = DateTime.Now;
+        }
+
+        internal void RegisterPollItems(string[] itemNames) {
+            CommonDataContract.PollItem newPollItem;
+            foreach (var item in itemNames) {
+                newPollItem = new CommonDataContract.PollItem(item);
+                AddPollItemToHashtable(newPollItem);
+            }
+        }
+
+        internal void RegisterPollItems(IList<CommonDataContract.PollItem> pollItems) {
+            foreach (var item in pollItems) {
+                AddPollItemToHashtable(item);
+            }
+        }
+
+        private void AddPollItemToHashtable(CommonDataContract.PollItem pollItem) {
+            if (!_hashtablePollItems.Contains(pollItem.ItemName)) {
+                _hashtablePollItems.Add(pollItem.ItemName, pollItem);
+            }
         }
     }
 }

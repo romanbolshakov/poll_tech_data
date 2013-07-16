@@ -2,18 +2,21 @@
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{2330D406-6AE3-4158-91F3-70840D7ECA75}</ProjectGuid>
-    <OutputType>Library</OutputType>
+    <ProjectGuid>{BD81C376-5219-47F9-86EA-5E1FA3588262}</ProjectGuid>
+    <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Eam.Client.Model.TechData</RootNamespace>
-    <AssemblyName>Eam.Client.Model.TechData</AssemblyName>
+    <RootNamespace>test_EamTechDataModel_console</RootNamespace>
+    <AssemblyName>test_EamTechDataModel_console</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -22,7 +25,8 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -31,11 +35,17 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="OpcDaNetB">
-      <HintPath>..\..\..\OPCDataAccess\DataAccessService\DataAccessService\bin\Debug\OpcDaNetB.dll</HintPath>
+    <Reference Include="Eam.Client.Model.TechData, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Github\PollTechData\Eam.Client.Model.TechData\bin\Debug\Eam.Client.Model.TechData.dll</HintPath>
     </Reference>
-    <Reference Include="OpcNetBase">
-      <HintPath>..\..\..\OPCDataAccess\DataAccessService\DataAccessService\bin\Debug\OpcNetBase.dll</HintPath>
+    <Reference Include="OpcDaNetB, Version=8.5.0.0, Culture=neutral, PublicKeyToken=5b58a8d8b6f4763b, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Work\EAM_2\Eam.Client\Eam.Client.Model.TechData\bin\Debug\OpcDaNetB.dll</HintPath>
+    </Reference>
+    <Reference Include="OpcNetBase, Version=2.0.0.0, Culture=neutral, PublicKeyToken=5b58a8d8b6f4763b, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Work\EAM_2\Eam.Client\Eam.Client.Model.TechData\bin\Debug\OpcNetBase.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -46,30 +56,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CommonDataContract\PollItemValue.cs" />
-    <Compile Include="CommonDataContract\PollItem.cs" />
-    <Compile Include="Interfaces\IDataStore.cs" />
-    <Compile Include="InternalDAL\InternalDataStore.cs" />
-    <Compile Include="OPCDataContract\OPCGroup.cs" />
-    <Compile Include="OPCDataContract\OPCItem.cs" />
-    <Compile Include="OPCDataContract\OPCItemValue.cs" />
-    <Compile Include="OPCDataContract\OPCServer.cs" />
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="TDDataSource.cs" />
-    <Compile Include="TDDataSourceCollection.cs" />
-    <Compile Include="TDOpcDataSource.cs" />
-    <Compile Include="TDOpcPollProcess.cs" />
-    <Compile Include="TDPollProcess.cs" />
-    <Compile Include="TDConfiguration.cs" />
-    <Compile Include="TDDataBuffer.cs" />
-    <Compile Include="TDDataManager.cs" />
-    <Compile Include="TDProcessManager.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Tests\" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Diagrams\ClassDiagram.cd" />
+    <None Include="app.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

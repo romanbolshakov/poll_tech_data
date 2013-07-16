@@ -15,9 +15,25 @@ namespace Eam.Client.Model.TechData {
         private TDDataManager _currentDataManager;
         private System.Threading.Thread _pollThread;
         private bool _threadStopWork;
+        private int _pollDelay;
 
+        /// <summary>
+        /// .ctor
+        /// </summary>
+        /// <param name="currentDataManager">data manager instance</param>
         public TDPollProcess(TDDataManager currentDataManager) {
             _currentDataManager = currentDataManager;
+            _pollDelay = 500;
+        }
+
+        /// <summary>
+        /// .ctor
+        /// </summary>
+        /// <param name="currentDataManager">data manager instance</param>
+        /// <param name="pollDelay">poll delay in milliseconds (500 ms by default)</param>
+        public TDPollProcess(TDDataManager currentDataManager, int pollDelay)
+            : this(currentDataManager) {
+            _pollDelay = pollDelay;
         }
 
         public void StartPollProcess() {
@@ -33,7 +49,7 @@ namespace Eam.Client.Model.TechData {
                 pollItemValues = Poll();
                 if (pollItemValues != null)
                     SaveDataToBuffer(pollItemValues);
-                System.Threading.Thread.Sleep(900);
+                System.Threading.Thread.Sleep(_pollDelay);
             }
         }
 

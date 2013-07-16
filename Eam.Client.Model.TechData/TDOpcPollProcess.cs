@@ -11,10 +11,18 @@ namespace Eam.Client.Model.TechData {
         private string[] _opcItemNames;
         private bool _isServerConnected;
 
-        internal TDOpcPollProcess(OPCServer opcServer, TDDataManager currentDataManager) :
-            base(currentDataManager) {
+        /// <summary>
+        /// .ctor
+        /// </summary>
+        /// <param name="opcServer">OPC server instance (intrenal)</param>
+        /// <param name="currentDataManager">Cerrent data manager</param>
+        /// <param name="pollDelay">Poll delay in milliseconds (500 ms by default)</param>
+        internal TDOpcPollProcess(OPCServer opcServer, TDDataManager currentDataManager, int pollDelay) :
+            base(currentDataManager, pollDelay) {
             _isServerConnected = ConnectToServer(opcServer.HostName, opcServer.ServerName);
             _opcItemNames = GetOpcItemNames(opcServer);
+            IList<CommonDataContract.PollItem> pollItems = GetPollItems(opcServer);
+            currentDataManager.RegisterPollItems(pollItems);
         }
 
         protected override CommonDataContract.PollItemValue[] Poll() {
@@ -62,6 +70,16 @@ namespace Eam.Client.Model.TechData {
                 }
             }
             return result.ToArray();
+        }
+
+        private List<CommonDataContract.PollItem> GetPollItems(OPCServer opcServer) {
+            List<CommonDataContract.PollItem> result = new List<CommonDataContract.PollItem>();
+            foreach (var currentGroup in opcServer.Groups) {
+                foreach (var currentItem in currentGroup.Items) {
+                    result.Add(currentItem);
+                }
+            }
+            return result;
         }
     }
 }

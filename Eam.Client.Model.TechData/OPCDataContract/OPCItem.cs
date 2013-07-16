@@ -7,16 +7,10 @@ using Eam.Client.Model.TechData.CommonDataContract;
 namespace Eam.Client.Model.TechData.OPCDataContract {
     public class OPCItem: PollItem {
         private OPCGroup _opcGroup;
-        private string _name;
-        public string ItemName {
-            get { return _name; }
-            set { _name = value; }
-        }
 
-        private string _fullName;
         public string FullName {
-            get { return _fullName; }
-            set { _fullName = value; }
+            get { return base.ItemName; }
+            set { base.ItemName = value; }
         }
 
         private OPCItemValue _value;
@@ -37,7 +31,7 @@ namespace Eam.Client.Model.TechData.OPCDataContract {
         }
 
         public override string ToString() {
-            return _name;
+            return FullName;
         }
 
     }

@@ -9,6 +9,10 @@ namespace Eam.Client.Model.TechData {
         public enum TDDataSourceType { OPC };
 
         public TDDataSourceType DataSourceType { get; private set; }
+        /// <summary>
+        /// Poll delay in milliseconds (500 by default)
+        /// </summary>
+        public int PollDelay { get; set; }
 
     }
 }

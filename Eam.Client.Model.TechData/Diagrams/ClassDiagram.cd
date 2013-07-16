@@ -1,0 +1,149 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Eam.Client.Model.TechData.TDConfiguration">
+    <Position X="5.25" Y="0.5" Width="1.5" />
+    <AssociationLine Name="_dataSourceCollection" Type="Eam.Client.Model.TechData.TDDataSourceCollection" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="5.25" Y="1.84" />
+        <Point X="4.875" Y="1.84" />
+        <Point X="4.875" Y="0.812" />
+        <Point X="3.5" Y="0.812" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAACAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>TDConfiguration.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_dataSourceCollection" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Eam.Client.Model.TechData.TDProcessManager">
+    <Position X="6" Y="3.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAQQAAAAIAAAAAQAAAAAABAAAAAAAEAA=</HashCode>
+      <FileName>TDProcessManager.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_currentConfiguration" />
+      <Field Name="_currentDataManager" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Field Name="_pollProcesses" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Eam.Client.Model.TechData.TDDataBuffer">
+    <Position X="11.25" Y="2.5" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAQAAAAAAACAAAGAAAQAAAAAAAAAABACAAAAAAAAA=</HashCode>
+      <FileName>TDDataBuffer.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_hashtablePollItems" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Eam.Client.Model.TechData.TDDataManager">
+    <Position X="8.5" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAQAAAAAAACQAAAAAAAAAAAAAAAAAAAAAAAAQAAAA=</HashCode>
+      <FileName>TDDataManager.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_externalDataStore" />
+      <Property Name="CurrentDataBuffer" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Eam.Client.Model.TechData.TDDataSource" Collapsed="true">
+    <Position X="1.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>TDDataSource.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Eam.Client.Model.TechData.TDDataSourceCollection" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="1.25" Y="0.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAABAAAAAAAAAAQBgAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>TDDataSourceCollection.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Field Name="_items" />
+    </ShowAsCollectionAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Eam.Client.Model.TechData.TDOpcDataSource" Collapsed="true">
+    <Position X="1.5" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABABA=</HashCode>
+      <FileName>TDOpcDataSource.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Eam.Client.Model.TechData.TDOpcPollProcess" Collapsed="true">
+    <Position X="1.75" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQEAAACAAAAAAAAAAAAAEAgAAAAACAQAAAAgAAAAAAA=</HashCode>
+      <FileName>TDOpcPollProcess.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Eam.Client.Model.TechData.TDPollProcess" Collapsed="true">
+    <Position X="1.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAAAGAAAAAAAAAAICAAAAAAACAAAAAAgAAAAQAA=</HashCode>
+      <FileName>TDPollProcess.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="System.Collections.Hashtable" Collapsed="true">
+    <Position X="14.5" Y="2.75" Width="1.5" />
+    <TypeIdentifier />
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Eam.Client.Model.TechData.CommonDataContract.PollItem" Collapsed="true">
+    <Position X="14.5" Y="3.75" Width="1.5" />
+    <NestedTypes>
+      <Class Name="Eam.Client.Model.TechData.CommonDataContract.PollItem.PollItemValueUpdatedEventArgs" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>CommonDataContract\PollItem.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAEAAAAAAhAAAAAAQAAAAAACEEEAAAAASAAABAAAAA=</HashCode>
+      <FileName>CommonDataContract\PollItem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Eam.Client.Model.TechData.CommonDataContract.PollItemValue" Collapsed="true">
+    <Position X="16.25" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAgAACAAAAAAAAAAAAAAAgAAAAAAA=</HashCode>
+      <FileName>CommonDataContract\PollItemValue.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Eam.Client.Model.TechData.OPCDataContract.OPCItem">
+    <Position X="14.5" Y="5.5" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>ABAAAAAAAAAAAIQEAAAAAAAAAAAAAAAAAAAgAAAABgA=</HashCode>
+      <FileName>OPCDataContract\OPCItem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Eam.Client.Model.TechData.OPCDataContract.OPCItemValue">
+    <Position X="16.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAQAQBIAAAQBAAAAAAQAAAAAAAAAEAAAAAAAAAAA=</HashCode>
+      <FileName>OPCDataContract\OPCItemValue.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="Eam.Client.Model.TechData.Interfaces.IDataStore" Collapsed="true">
+    <Position X="11.25" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Interfaces\IDataStore.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
