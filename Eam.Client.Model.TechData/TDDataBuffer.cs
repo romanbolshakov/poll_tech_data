@@ -7,7 +7,7 @@ namespace Eam.Client.Model.TechData {
     /// <summary>
     /// Class for storing technology data
     /// </summary>
-    public class TDDataBuffer {
+    internal class TDDataBuffer {
         /// <summary>
         /// hash-table for pair itemID(string)-PollItem(instance)
         /// </summary>
@@ -20,17 +20,17 @@ namespace Eam.Client.Model.TechData {
             get { return _lastTimeStamp; }
         }
 
-        public TDDataBuffer() {
+        internal TDDataBuffer() {
             _hashtablePollItems = new System.Collections.Hashtable();
         }
 
-        public object this[object key] {
+        internal object this[object key] {
             get {
                 return _hashtablePollItems[key];
             }
         }
 
-        public ICollection<CommonDataContract.PollItem> GetAllItems() {
+        internal ICollection<CommonDataContract.PollItem> GetAllItems() {
             return null;
             //return _hashtablePollItems.Values;
         }
@@ -67,6 +67,14 @@ namespace Eam.Client.Model.TechData {
             if (!_hashtablePollItems.Contains(pollItem.ItemName)) {
                 _hashtablePollItems.Add(pollItem.ItemName, pollItem);
             }
+        }
+
+        public CommonDataContract.PollItemValue GetLastPollItemValue(string pollItemName) {
+            if (_hashtablePollItems.Contains(pollItemName)) {
+                CommonDataContract.PollItem pollItem = _hashtablePollItems[pollItemName] as CommonDataContract.PollItem;
+                return pollItem.GetLastValue();
+            }
+            else return null;
         }
     }
 }

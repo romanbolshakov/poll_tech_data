@@ -47,8 +47,9 @@ namespace Eam.Client.Model.TechData {
             CommonDataContract.PollItemValue[] pollItemValues;
             while (!_threadStopWork) {
                 pollItemValues = Poll();
-                if (pollItemValues != null)
+                if (pollItemValues != null) {
                     SaveDataToBuffer(pollItemValues);
+                }
                 System.Threading.Thread.Sleep(_pollDelay);
             }
         }

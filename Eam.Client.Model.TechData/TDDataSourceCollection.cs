@@ -23,5 +23,9 @@ namespace Eam.Client.Model.TechData {
         public System.Collections.IEnumerator GetEnumerator() {
             return _items.GetEnumerator();
         }
+
+        public TDDataSource this[int index] {
+            get { return _items[index]; }
+        }
     }
 }

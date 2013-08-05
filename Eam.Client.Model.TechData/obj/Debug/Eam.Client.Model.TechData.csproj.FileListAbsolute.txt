@@ -14,3 +14,4 @@ D:\Documents\Projects\Github\PollTechData\Eam.Client.Model.TechData\bin\Debug\Op
 D:\Documents\Projects\Github\PollTechData\Eam.Client.Model.TechData\obj\Debug\ResolveAssemblyReference.cache
 D:\Documents\Projects\Github\PollTechData\Eam.Client.Model.TechData\obj\Debug\Eam.Client.Model.TechData.dll
 D:\Documents\Projects\Github\PollTechData\Eam.Client.Model.TechData\obj\Debug\Eam.Client.Model.TechData.pdb
+D:\Documents\Projects\Github\PollTechData\Eam.Client.Model.TechData\bin\Debug\Eam.Client.Model.TechData.dll.config

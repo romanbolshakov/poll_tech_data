@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="c5a069b0-31e8-49ad-846b-d7c9ddca6d7b" name="Roman@ROMAN-ALG 2013-08-02 15:39:47" runUser="ALG\Roman" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Локальные" id="16cc96cd-b63d-4f10-b203-31a43844ff5b">
+    <Description>Это - параметры по умолчанию для локального тестового запуска.</Description>
+    <Deployment enabled="false" runDeploymentRoot="Roman_ROMAN-ALG 2013-08-02 15_39_47">
+      <DeploymentItem filename="D:\Documents\Projects\Github\PollTechData\Eam.Client.Model.TechData\bin\Debug\Eam.Client.Model.TechData.dll" />
+    </Deployment>
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+  </TestSettings>
+  <Times creation="2013-08-02T15:39:47.5421835+03:00" queuing="2013-08-02T15:39:48.7382519+03:00" start="2013-08-02T15:39:48.8732596+03:00" finish="2013-08-02T15:40:28.8395455+03:00" />
+  <ResultSummary outcome="Error">
+    <Counters total="1" executed="1" error="0" failed="0" timeout="0" aborted="1" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" passed="0" completed="0" inProgress="0" pending="0" />
+    <RunInfos>
+      <RunInfo computerName="ROMAN-ALG" outcome="Error" timestamp="2013-08-02T15:40:28.8385455+03:00">
+        <Text>Test host process exited unexpectedly.</Text>
+      </RunInfo>
+    </RunInfos>
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="InitProcessManager" storage="d:\documents\projects\github\polltechdata\unittestproject\bin\debug\unittestproject.dll" id="079a31cb-6b48-f9bf-65c7-00e217a36eed">
+      <Execution id="9263e655-768c-4869-b201-26f11bee0ea8" />
+      <TestMethod codeBase="D:/Documents/Projects/Github/PollTechData/UnitTestProject/bin/Debug/UnitTestProject.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="UnitTestProject.TDProcessManagerTests, UnitTestProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="InitProcessManager" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Отсутствующие в списке результаты" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="Все загруженные результаты" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="079a31cb-6b48-f9bf-65c7-00e217a36eed" executionId="9263e655-768c-4869-b201-26f11bee0ea8" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="9263e655-768c-4869-b201-26f11bee0ea8" testId="079a31cb-6b48-f9bf-65c7-00e217a36eed" testName="InitProcessManager" computerName="ROMAN-ALG" duration="00:00:39.8312782" startTime="2013-08-02T15:39:49.0082673+03:00" endTime="2013-08-02T15:40:28.8395455+03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Aborted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="9263e655-768c-4869-b201-26f11bee0ea8">
+    </UnitTestResult>
+  </Results>
+</TestRun>

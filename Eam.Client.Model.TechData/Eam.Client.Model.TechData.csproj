@@ -50,11 +50,17 @@
     <Compile Include="CommonDataContract\PollItem.cs" />
     <Compile Include="Interfaces\IDataStore.cs" />
     <Compile Include="InternalDAL\InternalDataStore.cs" />
+    <Compile Include="InternalDAL\LogFileDataStore.cs" />
     <Compile Include="OPCDataContract\OPCGroup.cs" />
     <Compile Include="OPCDataContract\OPCItem.cs" />
     <Compile Include="OPCDataContract\OPCItemValue.cs" />
     <Compile Include="OPCDataContract\OPCServer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
     <Compile Include="TDDataSource.cs" />
     <Compile Include="TDDataSourceCollection.cs" />
     <Compile Include="TDOpcDataSource.cs" />
@@ -69,7 +75,12 @@
     <Folder Include="Tests\" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="app.config" />
     <None Include="Diagrams\ClassDiagram.cd" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

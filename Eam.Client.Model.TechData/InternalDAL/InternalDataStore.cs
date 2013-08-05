@@ -9,5 +9,8 @@ namespace Eam.Client.Model.TechData.InternalDAL {
     /// Using if client code not provide his own implementation
     /// </summary>
     internal class InternalDataStore:Interfaces.IDataStore {
+        public void SaveValues(CommonDataContract.PollItemValue[] pollItemValues) {
+            
+        }
     }
 }

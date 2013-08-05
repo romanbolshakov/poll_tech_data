@@ -46,19 +46,21 @@ namespace test_EamTechDataModel_console {
             TDProcessManager processManager = new TDProcessManager(configuration);
             processManager.StartAllProcesses();
             DateTime lastUpdateStamp;
-            lastUpdateStamp = processManager.CurrentDataBuffer.LastTimeStamp;
+            lastUpdateStamp = DateTime.Now;
             string itemID;
             string itemValue;
-            /*while (!isStop) {
-                if (lastUpdateStamp != processManager.CurrentDataBuffer.LastTimeStamp) {
+            System.Threading.Thread.Sleep(500);
+            while (!isStop) {
+                if (lastUpdateStamp != processManager.CurrentDataManager.GetLastUpdatedTimestamp) {
                     foreach (PollItem item in _monitorPollItems) {
                         itemValue = item.GetLastValue().Value.ToString();
                         itemID = item.ItemName;
                         Console.WriteLine("{0} = {1}", itemID, itemValue);
                     }
-                    lastUpdateStamp = processManager.CurrentDataBuffer.LastTimeStamp;
+                    lastUpdateStamp = processManager.CurrentDataManager.GetLastUpdatedTimestamp;
+                    System.Threading.Thread.Sleep(500);
                 }
-            }*/
+            }
         }
 
         private static TDConfiguration CreateTestConfiguration() {
@@ -130,7 +132,7 @@ namespace test_EamTechDataModel_console {
                             opcItem = new OPCItem();
                             opcGroup.Items.Add(opcItem);
                             opcItem.FullName = itemNode.Attributes["name"].Value.ToString();
-                            opcItem.ValueUpdatedEvent += new EventHandler<PollItem.PollItemValueUpdatedEventArgs>(opcItem_ValueUpdatedEvent);
+                            //opcItem.ValueUpdatedEvent += new EventHandler<PollItem.PollItemValueUpdatedEventArgs>(opcItem_ValueUpdatedEvent);
                             _monitorPollItems.Add(opcItem);
                         }
                     }
@@ -140,9 +142,9 @@ namespace test_EamTechDataModel_console {
         }
 
         static void opcItem_ValueUpdatedEvent(object sender, PollItem.PollItemValueUpdatedEventArgs e) {
-            string itemValue = e.NewPollItemValue.Value.ToString();
+            /*string itemValue = e.NewPollItemValue.Value.ToString();
             string itemID = e.NewPollItemValue.ItemID;
-            Console.WriteLine("{0} = {1}", itemID, itemValue);
+            Console.WriteLine("{0} = {1}", itemID, itemValue);*/
         }
     }
 }

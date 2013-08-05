@@ -4,11 +4,18 @@ using System.Linq;
 using System.Text;
 
 namespace Eam.Client.Model.TechData {
+    /// <summary>
+    /// This class is represent an abstract data source which can be in configuration data
+    /// The PollDelay field is for store value from configuration.
+    /// </summary>
     public abstract class TDDataSource {
 
-        public enum TDDataSourceType { OPC };
+        public enum TDDataSourceType { OPC, Fake };
 
-        public TDDataSourceType DataSourceType { get; private set; }
+        /// <summary>
+        /// [Read only]
+        /// </summary>
+        public TDDataSourceType DataSourceType { get; protected set; }
         /// <summary>
         /// Poll delay in milliseconds (500 by default)
         /// </summary>

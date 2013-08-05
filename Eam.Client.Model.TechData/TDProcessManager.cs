@@ -15,10 +15,8 @@ namespace Eam.Client.Model.TechData {
         private List<TDPollProcess> _pollProcesses;
         private TDConfiguration _currentConfiguration;
 
-        public TDDataBuffer CurrentDataBuffer {
-            get {
-                return _currentDataManager.CurrentDataBuffer;
-            }
+        public TDDataManager CurrentDataManager {
+            get { return _currentDataManager; }
         }
 
         public TDProcessManager(TDConfiguration configuration) {

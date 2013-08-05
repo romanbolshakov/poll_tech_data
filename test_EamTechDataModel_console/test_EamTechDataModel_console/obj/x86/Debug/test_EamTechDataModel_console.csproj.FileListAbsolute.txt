@@ -13,3 +13,10 @@ D:\Documents\Projects\Test\test_EamTechDataModel_console\test_EamTechDataModel_c
 D:\Documents\Projects\Github\PollTechData\test_EamTechDataModel_console\test_EamTechDataModel_console\bin\Debug\test_EamTechDataModel_console.exe.config
 D:\Documents\Projects\Github\PollTechData\test_EamTechDataModel_console\test_EamTechDataModel_console\obj\x86\Debug\test_EamTechDataModel_console.exe
 D:\Documents\Projects\Github\PollTechData\test_EamTechDataModel_console\test_EamTechDataModel_console\obj\x86\Debug\test_EamTechDataModel_console.pdb
+D:\Documents\Projects\Github\PollTechData\test_EamTechDataModel_console\test_EamTechDataModel_console\bin\Debug\test_EamTechDataModel_console.exe
+D:\Documents\Projects\Github\PollTechData\test_EamTechDataModel_console\test_EamTechDataModel_console\bin\Debug\test_EamTechDataModel_console.pdb
+D:\Documents\Projects\Github\PollTechData\test_EamTechDataModel_console\test_EamTechDataModel_console\bin\Debug\Eam.Client.Model.TechData.pdb
+D:\Documents\Projects\Github\PollTechData\test_EamTechDataModel_console\test_EamTechDataModel_console\bin\Debug\OpcDaNetB.xml
+D:\Documents\Projects\Github\PollTechData\test_EamTechDataModel_console\test_EamTechDataModel_console\bin\Debug\OpcNetBase.xml
+D:\Documents\Projects\Github\PollTechData\test_EamTechDataModel_console\test_EamTechDataModel_console\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\Documents\Projects\Github\PollTechData\test_EamTechDataModel_console\test_EamTechDataModel_console\bin\Debug\Eam.Client.Model.TechData.dll

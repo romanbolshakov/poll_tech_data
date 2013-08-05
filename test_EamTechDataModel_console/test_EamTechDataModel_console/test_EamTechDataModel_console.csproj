@@ -35,10 +35,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Eam.Client.Model.TechData, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\Github\PollTechData\Eam.Client.Model.TechData\bin\Debug\Eam.Client.Model.TechData.dll</HintPath>
-    </Reference>
     <Reference Include="OpcDaNetB, Version=8.5.0.0, Culture=neutral, PublicKeyToken=5b58a8d8b6f4763b, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\Work\EAM_2\Eam.Client\Eam.Client.Model.TechData\bin\Debug\OpcDaNetB.dll</HintPath>
@@ -61,6 +57,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Eam.Client.Model.TechData\Eam.Client.Model.TechData.csproj">
+      <Project>{2330D406-6AE3-4158-91F3-70840D7ECA75}</Project>
+      <Name>Eam.Client.Model.TechData</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
