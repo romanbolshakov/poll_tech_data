@@ -18,6 +18,7 @@ namespace Eam.Client.Model.TechData {
         /// </summary>
         public DateTime LastTimeStamp {
             get { return _lastTimeStamp; }
+            set { _lastTimeStamp = value; }
         }
 
         internal TDDataBuffer() {
@@ -35,7 +36,7 @@ namespace Eam.Client.Model.TechData {
             //return _hashtablePollItems.Values;
         }
 
-        internal void UpdateValues(CommonDataContract.PollItemValue[] pollItemValues) {
+        /*internal void UpdateValues(CommonDataContract.PollItemValue[] pollItemValues) {
             string itemID;
             CommonDataContract.PollItem currentPollItem;
             foreach (CommonDataContract.PollItemValue currentItemValue in pollItemValues) {
@@ -44,9 +45,25 @@ namespace Eam.Client.Model.TechData {
                     _hashtablePollItems.Add(itemID, new CommonDataContract.PollItem());
                 }
                 currentPollItem = _hashtablePollItems[itemID] as CommonDataContract.PollItem;
+                if (currentPollItem.IsPack) {
+                    UnpackAndSaveSubItems(currentPollItem, currentItemValue);
+                }
                 currentPollItem.AddValue(currentItemValue.Timestamp, currentItemValue);
             }
             _lastTimeStamp = DateTime.Now;
+        }
+
+        private void UnpackAndSaveSubItems(CommonDataContract.PollItem currentPollItem, CommonDataContract.PollItemValue currentItemValue) {
+            throw new NotImplementedException();
+        }
+        */
+
+        internal bool Contains(string itemID) {
+            return _hashtablePollItems.Contains(itemID);
+        }
+
+        internal CommonDataContract.PollItem GetPollItemByID(string itemID) {
+            return _hashtablePollItems[itemID] as CommonDataContract.PollItem;
         }
 
         internal void RegisterPollItems(string[] itemNames) {
@@ -61,6 +78,11 @@ namespace Eam.Client.Model.TechData {
             foreach (var item in pollItems) {
                 AddPollItemToHashtable(item);
             }
+        }
+
+        internal void RegisterPollItem(string pollItemID) {
+            CommonDataContract.PollItem newPollItem = new CommonDataContract.PollItem(pollItemID);
+            AddPollItemToHashtable(newPollItem);
         }
 
         private void AddPollItemToHashtable(CommonDataContract.PollItem pollItem) {

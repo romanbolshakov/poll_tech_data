@@ -15,3 +15,4 @@ D:\Documents\Projects\Github\PollTechData\Eam.Client.Model.TechData\obj\Debug\Re
 D:\Documents\Projects\Github\PollTechData\Eam.Client.Model.TechData\obj\Debug\Eam.Client.Model.TechData.dll
 D:\Documents\Projects\Github\PollTechData\Eam.Client.Model.TechData\obj\Debug\Eam.Client.Model.TechData.pdb
 D:\Documents\Projects\Github\PollTechData\Eam.Client.Model.TechData\bin\Debug\Eam.Client.Model.TechData.dll.config
+D:\Documents\Projects\Github\PollTechData\Eam.Client.Model.TechData\bin\Debug\TechDatabase.sdf

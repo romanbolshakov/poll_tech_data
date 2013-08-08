@@ -9,3 +9,4 @@ D:\Documents\Projects\Github\PollTechData\UnitTestProject\bin\Debug\OpcNetBase.x
 D:\Documents\Projects\Github\PollTechData\UnitTestProject\obj\Debug\ResolveAssemblyReference.cache
 D:\Documents\Projects\Github\PollTechData\UnitTestProject\obj\Debug\UnitTestProject.dll
 D:\Documents\Projects\Github\PollTechData\UnitTestProject\obj\Debug\UnitTestProject.pdb
+D:\Documents\Projects\Github\PollTechData\UnitTestProject\bin\Debug\TechDatabase.sdf

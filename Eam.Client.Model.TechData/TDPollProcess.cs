@@ -16,6 +16,9 @@ namespace Eam.Client.Model.TechData {
         private System.Threading.Thread _pollThread;
         private bool _threadStopWork;
         private int _pollDelay;
+        private string _pollProcessID;
+
+        private System.Threading.AutoResetEvent _autoResetEvent;
 
         /// <summary>
         /// .ctor
@@ -24,6 +27,7 @@ namespace Eam.Client.Model.TechData {
         public TDPollProcess(TDDataManager currentDataManager) {
             _currentDataManager = currentDataManager;
             _pollDelay = 500;
+            _autoResetEvent = new System.Threading.AutoResetEvent(false);
         }
 
         /// <summary>
@@ -31,9 +35,10 @@ namespace Eam.Client.Model.TechData {
         /// </summary>
         /// <param name="currentDataManager">data manager instance</param>
         /// <param name="pollDelay">poll delay in milliseconds (500 ms by default)</param>
-        public TDPollProcess(TDDataManager currentDataManager, int pollDelay)
+        public TDPollProcess(TDDataManager currentDataManager, int pollDelay, string pollProcessID)
             : this(currentDataManager) {
             _pollDelay = pollDelay;
+            _pollProcessID = pollProcessID;
         }
 
         public void StartPollProcess() {
@@ -43,15 +48,28 @@ namespace Eam.Client.Model.TechData {
             _pollThread.Start();
         }
 
+        internal void StopPollProcess() {
+            _threadStopWork = true;
+            _autoResetEvent.WaitOne();
+        }
+
         private void WorkPollProcess() {
             CommonDataContract.PollItemValue[] pollItemValues;
+            TDInternalLogger.GetLogger().Log("WorkPollProcess", "Start polling: " + _pollProcessID);
             while (!_threadStopWork) {
-                pollItemValues = Poll();
-                if (pollItemValues != null) {
-                    SaveDataToBuffer(pollItemValues);
+                try {
+                    pollItemValues = Poll();
+                    if (pollItemValues != null) {
+                        SaveDataToBuffer(pollItemValues);
+                    }
+                    System.Threading.Thread.Sleep(_pollDelay);
                 }
-                System.Threading.Thread.Sleep(_pollDelay);
+                catch (Exception ex) {
+                    TDInternalLogger.GetLogger().LogException(ex);
+                }
             }
+            TDInternalLogger.GetLogger().Log("WorkPollProcess", "Stop polling: " + _pollProcessID);
+            _autoResetEvent.Set();
         }
 
         private void SaveDataToBuffer(CommonDataContract.PollItemValue[] pollItemValues) {
@@ -59,5 +77,6 @@ namespace Eam.Client.Model.TechData {
         }
 
         protected abstract CommonDataContract.PollItemValue[] Poll();
+
     }
 }

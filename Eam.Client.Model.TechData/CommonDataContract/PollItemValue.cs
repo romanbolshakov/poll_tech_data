@@ -7,6 +7,6 @@ namespace Eam.Client.Model.TechData.CommonDataContract {
     public class PollItemValue {
         public string ItemID { get; internal set; }
         public object Value { get; internal set; }
-        public DateTime Timestamp { get; protected set; }
+        public DateTime Timestamp { get; internal set; }
     }
 }

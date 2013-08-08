@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="WINDOWS-1251"?><root>
+<item-value id="SimulatedData.Random" timestamp="07.08.2013 16:36:00"	 value="699427"/>
+<item-value id="SimulatedData.Ramp" timestamp="07.08.2013 16:36:00"	 value="60"/>
+<item-value id="SimulatedData.Signal" timestamp="07.08.2013 16:36:00"	 value="False"/>
+<item-value id="SimulatedData.Sine" timestamp="07.08.2013 16:36:00"	 value="0"/>
+<item-value id="SimulatedData.Step" timestamp="07.08.2013 16:36:00"	 value="95"/>
+<item-value id="SimulatedData.Random" timestamp="07.08.2013 16:36:01"	 value="736028"/>
+<item-value id="SimulatedData.Ramp" timestamp="07.08.2013 16:36:01"	 value="55"/>
+<item-value id="SimulatedData.Signal" timestamp="07.08.2013 16:36:01"	 value="True"/>
+<item-value id="SimulatedData.Sine" timestamp="07.08.2013 16:36:01"	 value="0,707106781186547"/>
+<item-value id="SimulatedData.Step" timestamp="07.08.2013 16:36:01"	 value="100"/>
+<item-value id="SimulatedData.Random" timestamp="07.08.2013 16:36:02"	 value="67853"/>
+<item-value id="SimulatedData.Ramp" timestamp="07.08.2013 16:36:02"	 value="50"/>
+<item-value id="SimulatedData.Signal" timestamp="07.08.2013 16:36:02"	 value="False"/>
+<item-value id="SimulatedData.Sine" timestamp="07.08.2013 16:36:02"	 value="1"/>
+<item-value id="SimulatedData.Step" timestamp="07.08.2013 16:36:02"	 value="0"/>
+<item-value id="SimulatedData.Random" timestamp="07.08.2013 16:36:03"	 value="343558"/>
+<item-value id="SimulatedData.Ramp" timestamp="07.08.2013 16:36:03"	 value="45"/>
+<item-value id="SimulatedData.Signal" timestamp="07.08.2013 16:36:03"	 value="True"/>
+<item-value id="SimulatedData.Sine" timestamp="07.08.2013 16:36:03"	 value="0,707106781186548"/>
+<item-value id="SimulatedData.Step" timestamp="07.08.2013 16:36:03"	 value="5"/>
+<item-value id="SimulatedData.Random" timestamp="07.08.2013 16:36:04"	 value="254665"/>
+<item-value id="SimulatedData.Ramp" timestamp="07.08.2013 16:36:04"	 value="40"/>
+<item-value id="SimulatedData.Signal" timestamp="07.08.2013 16:36:04"	 value="False"/>
+<item-value id="SimulatedData.Sine" timestamp="07.08.2013 16:36:04"	 value="1,22460635382238E-16"/>
+<item-value id="SimulatedData.Step" timestamp="07.08.2013 16:36:04"	 value="10"/>

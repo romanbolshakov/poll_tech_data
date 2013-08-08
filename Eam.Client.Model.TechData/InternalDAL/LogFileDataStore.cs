@@ -16,6 +16,10 @@ namespace Eam.Client.Model.TechData.InternalDAL {
         internal enum LogTimeInterval { minute, hour, day }; 
 
         private string LOG_BASE_PATH = ".\\Log\\";
+        private string INIT_LOG_TEXT = "<?xml version=\"1.0\" encoding=\"WINDOWS-1251\"?><root>";
+        private string END_OF_FILE = "</root>";
+
+        System.Xml.XmlDocument _xmlDocument;
 
         private FileStream _fileStream;
         private StreamWriter _streamWriter;
@@ -33,6 +37,7 @@ namespace Eam.Client.Model.TechData.InternalDAL {
             _currentLogTimeInterval = LogTimeInterval.minute;
             LOG_BASE_PATH = Properties.Settings.Default.Log_file_base_path;
             CreateNewLogFile();
+            _xmlDocument = new System.Xml.XmlDocument();
         }
 
         /// <summary>
@@ -50,14 +55,22 @@ namespace Eam.Client.Model.TechData.InternalDAL {
         /// Creatint a new log file and its streams
         /// </summary>
         private void CreateNewLogFile() {
+            if (_streamWriter != null) {
+                ClosePrevFile();
+            }
             string newFileName = CreateCurrentLogFileName();
+            _fileStream = new FileStream(LOG_BASE_PATH + newFileName, FileMode.Append, FileAccess.Write);
+            _streamWriter = new StreamWriter(_fileStream);
+            _streamWriter.WriteLine(INIT_LOG_TEXT);
+            _logFileCreateDate = DateTime.Now;
+        }
+
+        private void ClosePrevFile() {
+            _streamWriter.WriteLine(END_OF_FILE);
             if (_streamWriter != null)
                 _streamWriter.Close();
             if (_fileStream != null)
                 _fileStream.Close();
-            _fileStream = new FileStream(LOG_BASE_PATH + newFileName, FileMode.Append, FileAccess.Write);
-            _streamWriter = new StreamWriter(_fileStream);
-            _logFileCreateDate = DateTime.Now;
         }
 
         /// <summary>
@@ -96,19 +109,65 @@ namespace Eam.Client.Model.TechData.InternalDAL {
                 string writeString;
                 foreach (var currentPollItemValue in pollItemValues) {
                     try {
-                        writeString = String.Format("{0}\t{1} {2}\t{3}",
-                            currentPollItemValue.ItemID,
-                            currentPollItemValue.Timestamp.ToShortDateString(),
-                            currentPollItemValue.Timestamp.ToLongTimeString(),
-                            currentPollItemValue.Value.ToString());
+                        writeString = CreateLogString(currentPollItemValue);
                         _streamWriter.WriteLine(writeString);
+                        _streamWriter.Flush();
                     }
                     catch (Exception e) {
-                        //_streamWriter.WriteLine(e.Message);
+                        TDInternalLogger.GetLogger().LogException(e);
                     }
                 }
             }
 
+        }
+        /*
+        public void SaveValues(CommonDataContract.PollItemValue[] pollItemValues) {
+            if (IsLogFileObsolete(_currentLogTimeInterval)) {
+                CreateNewLogFile();
+            }
+
+            if (_streamWriter != null) {
+                System.Xml.XmlNode newNode;
+                System.Xml.XmlAttribute newAttribure;
+                foreach (var currentPollItemValue in pollItemValues) {
+                    try {
+                        newNode = _xmlDocument.CreateElement("item-value");
+                        newAttribure = _xmlDocument.CreateAttribute("id");
+                        newAttribure.Value = currentPollItemValue.ItemID;
+                        newNode.Attributes.Append(newAttribure);
+                        _xmlDocument.AppendChild(newNode);
+
+                        newAttribure = _xmlDocument.CreateAttribute("timestamp");
+                        newAttribure.Value = currentPollItemValue.Timestamp.ToShortDateString() + " " +currentPollItemValue.Timestamp.ToLongTimeString();
+                        newNode.Attributes.Append(newAttribure);
+                        _xmlDocument.AppendChild(newNode);
+
+
+                        newAttribure = _xmlDocument.CreateAttribute("value");
+                        newAttribure.Value = currentPollItemValue.Value.ToString();
+                        newNode.Attributes.Append(newAttribure);
+                        _xmlDocument.AppendChild(newNode);
+                    }
+                    catch (Exception e) {
+                        TDInternalLogger.GetLogger().LogException(e);
+                    }
+                }
+                _xmlDocument.Save(_streamWriter);
+            }
+
+        }
+        */
+        private string CreateLogString(CommonDataContract.PollItemValue currentPollItemValue) {
+            //return String.Format("{0}\t{1} {2}\t{3}",
+            //               currentPollItemValue.ItemID,
+            //               currentPollItemValue.Timestamp.ToShortDateString(),
+            //               currentPollItemValue.Timestamp.ToLongTimeString(),
+            //               currentPollItemValue.Value.ToString());
+            return String.Format("<item-value id=\"{0}\" timestamp=\"{1} {2}\"\t value=\"{3}\"/>",
+                currentPollItemValue.ItemID,
+                currentPollItemValue.Timestamp.ToShortDateString(),
+                currentPollItemValue.Timestamp.ToLongTimeString(),
+                currentPollItemValue.Value.ToString());
         }
 
         

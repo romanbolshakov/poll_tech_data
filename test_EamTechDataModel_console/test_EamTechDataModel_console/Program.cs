@@ -15,8 +15,9 @@ namespace test_EamTechDataModel_console {
         private static string xmlConfigurationFileName;
         private static List<PollItem> _monitorPollItems;
 
+        private static System.Threading.AutoResetEvent autoResetEvent;
+
         static void Main(string[] args) {
-            
 
             isStop = false;
             if (args.Length > 0) {
@@ -29,8 +30,11 @@ namespace test_EamTechDataModel_console {
             while (input != "q") {
                 input = Console.ReadLine();
             }
+
             isStop = true;
-            System.Threading.Thread.Sleep(200);
+            Console.WriteLine("Waiting for stop polling");
+            autoResetEvent = new System.Threading.AutoResetEvent(false);
+            autoResetEvent.WaitOne();
         }
 
         private static void UpdateMonitor() {
@@ -40,8 +44,10 @@ namespace test_EamTechDataModel_console {
                 configuration = CreateTestConfiguration();
             }
             else {
-                configuration = CreateConfigurationByXML(xmlConfigurationFileName);
+                configuration = TDConfiguration.CreateConfigurationByXML(xmlConfigurationFileName);
             }
+
+            FillMonitorItems(configuration);
 
             TDProcessManager processManager = new TDProcessManager(configuration);
             processManager.StartAllProcesses();
@@ -49,16 +55,37 @@ namespace test_EamTechDataModel_console {
             lastUpdateStamp = DateTime.Now;
             string itemID;
             string itemValue;
-            System.Threading.Thread.Sleep(500);
+            System.Threading.Thread.Sleep(1000);
             while (!isStop) {
                 if (lastUpdateStamp != processManager.CurrentDataManager.GetLastUpdatedTimestamp) {
                     foreach (PollItem item in _monitorPollItems) {
-                        itemValue = item.GetLastValue().Value.ToString();
-                        itemID = item.ItemName;
-                        Console.WriteLine("{0} = {1}", itemID, itemValue);
+                        try {
+                            itemValue = item.GetLastValue().Value.ToString();
+                            itemID = item.ItemName;
+                            Console.WriteLine("{0} = {1}", itemID, itemValue);
+                        }
+                        catch{
+                        }
                     }
                     lastUpdateStamp = processManager.CurrentDataManager.GetLastUpdatedTimestamp;
                     System.Threading.Thread.Sleep(500);
+                }
+            }
+            processManager.StopAllProcesses();
+            autoResetEvent.Set();
+        }
+
+        private static void FillMonitorItems(TDConfiguration configuration) {
+            foreach (TDDataSource item in configuration.GetDataSources) {
+                foreach (var opcGroup in (item as TDOpcDataSource).OpcServer.Groups) {
+                    foreach (var opcItem in opcGroup.Items) {
+                        _monitorPollItems.Add(opcItem);
+                        if (opcItem.SubItems != null) {
+                            foreach (var subItem in opcItem.SubItems) {
+                                _monitorPollItems.Add(subItem);
+                            }
+                        }
+                    }
                 }
             }
         }
@@ -89,7 +116,7 @@ namespace test_EamTechDataModel_console {
             
         }
 
-        private static TDConfiguration CreateConfigurationByXML(string xmlFileName) {
+        /*private static TDConfiguration CreateConfigurationByXML(string xmlFileName) {
             TDConfiguration configuration = new TDConfiguration();
 
             System.Xml.XmlDocument xmlDocument = new System.Xml.XmlDocument();
@@ -140,6 +167,7 @@ namespace test_EamTechDataModel_console {
             }
             return opcDataSource;
         }
+        */
 
         static void opcItem_ValueUpdatedEvent(object sender, PollItem.PollItemValueUpdatedEventArgs e) {
             /*string itemValue = e.NewPollItemValue.Value.ToString();

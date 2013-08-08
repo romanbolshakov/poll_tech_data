@@ -18,7 +18,7 @@ namespace Eam.Client.Model.TechData {
         /// <param name="currentDataManager">Cerrent data manager</param>
         /// <param name="pollDelay">Poll delay in milliseconds (500 ms by default)</param>
         internal TDOpcPollProcess(OPCServer opcServer, TDDataManager currentDataManager, int pollDelay) :
-            base(currentDataManager, pollDelay) {
+            base(currentDataManager, pollDelay, opcServer.FullNetworkName) {
             _isServerConnected = ConnectToServer(opcServer.HostName, opcServer.ServerName);
             _opcItemNames = GetOpcItemNames(opcServer);
             IList<CommonDataContract.PollItem> pollItems = GetPollItems(opcServer);

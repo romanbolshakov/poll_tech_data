@@ -54,8 +54,21 @@ namespace Eam.Client.Model.TechData.CommonDataContract {
             set { _itemName = value; }
         }
 
+        public bool IsPackage { get; set; }
+        public int PackLength { get; set; }
+
+        private List<SubPollItem> _subItems;
+        public List<SubPollItem> SubItems {
+            get { return _subItems; }
+        }
+
+        internal void CreateSubItemCollection() {
+            _subItems = new List<SubPollItem>();
+        }
+
         public PollItem() {
             _hashtableItemValues = new System.Collections.Hashtable();
+            IsPackage = false;
             _maxValueCount = 10;
         }
 
@@ -85,6 +98,5 @@ namespace Eam.Client.Model.TechData.CommonDataContract {
             if (tempDateTime != null)
                 _firstTimestamp = tempDateTime.Value;
         }
-
     }
 }

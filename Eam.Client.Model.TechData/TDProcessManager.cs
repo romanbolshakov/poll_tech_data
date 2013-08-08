@@ -26,8 +26,15 @@ namespace Eam.Client.Model.TechData {
         }
 
         public void StartAllProcesses() {
+            TDInternalLogger.GetLogger();
             foreach (var currentProcess in _pollProcesses) {
                 currentProcess.StartPollProcess();
+            }
+        }
+
+        public void StopAllProcesses() {
+            foreach (var currentProcess in _pollProcesses) {
+                currentProcess.StopPollProcess();
             }
         }
 
