@@ -10,7 +10,7 @@ namespace Eam.Client.Model.TechData.InternalDAL {
     /// </summary>
     internal class InternalDataStore:Interfaces.IDataStore {
 
-        private System.Data.SqlServerCe.SqlCeConnection _connection;
+        /*private System.Data.SqlServerCe.SqlCeConnection _connection;
 
         public InternalDataStore() {
             _connection = 
@@ -28,5 +28,8 @@ namespace Eam.Client.Model.TechData.InternalDAL {
                 int rowCount = cmd.ExecuteNonQuery();
             }
         }
+         * */
+
+        public void SaveValues(CommonDataContract.PollItemValue[] pollItemValues) { }
     }
 }

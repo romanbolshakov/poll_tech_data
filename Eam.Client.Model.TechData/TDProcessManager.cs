@@ -19,9 +19,13 @@ namespace Eam.Client.Model.TechData {
             get { return _currentDataManager; }
         }
 
-        public TDProcessManager(TDConfiguration configuration) {
+        public TDProcessManager(TDConfiguration configuration)
+            : this(configuration, new InternalDAL.InternalDataStore()) {
+        }
+
+        public TDProcessManager(TDConfiguration configuration, Interfaces.IDataStore dataStore) {
             _currentConfiguration = configuration;
-            _currentDataManager = new TDDataManager(new InternalDAL.InternalDataStore());
+            _currentDataManager = new TDDataManager(dataStore);
             CreatePollProcesses(configuration, _currentDataManager);
         }
 

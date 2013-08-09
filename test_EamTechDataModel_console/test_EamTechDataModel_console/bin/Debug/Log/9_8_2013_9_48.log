@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="WINDOWS-1251"?><root>
+<item-value id="SimulatedData.Random" timestamp="09.08.2013 9:48:49"	 value="184448"/>
+<item-value id="SimulatedData.Ramp" timestamp="09.08.2013 9:48:49"	 value="15"/>
+<item-value id="SimulatedData.Signal" timestamp="09.08.2013 9:48:49"	 value="True"/>
+<item-value id="SimulatedData.Sine" timestamp="09.08.2013 9:48:49"	 value="0,707106781186547"/>
+<item-value id="SimulatedData.Step" timestamp="09.08.2013 9:48:49"	 value="25"/>
+<item-value id="SimulatedData.Random" timestamp="09.08.2013 9:48:50"	 value="344840"/>
+<item-value id="SimulatedData.Ramp" timestamp="09.08.2013 9:48:50"	 value="20"/>
+<item-value id="SimulatedData.Signal" timestamp="09.08.2013 9:48:50"	 value="False"/>
+<item-value id="SimulatedData.Sine" timestamp="09.08.2013 9:48:50"	 value="1"/>
+<item-value id="SimulatedData.Step" timestamp="09.08.2013 9:48:50"	 value="30"/>
+<item-value id="SimulatedData.Random" timestamp="09.08.2013 9:48:51"	 value="992447"/>
+<item-value id="SimulatedData.Ramp" timestamp="09.08.2013 9:48:51"	 value="25"/>
+<item-value id="SimulatedData.Signal" timestamp="09.08.2013 9:48:51"	 value="True"/>
+<item-value id="SimulatedData.Sine" timestamp="09.08.2013 9:48:51"	 value="0,707106781186548"/>
+<item-value id="SimulatedData.Step" timestamp="09.08.2013 9:48:51"	 value="35"/>
+<item-value id="SimulatedData.Random" timestamp="09.08.2013 9:48:52"	 value="792244"/>
+<item-value id="SimulatedData.Ramp" timestamp="09.08.2013 9:48:52"	 value="30"/>
+<item-value id="SimulatedData.Signal" timestamp="09.08.2013 9:48:52"	 value="False"/>
+<item-value id="SimulatedData.Sine" timestamp="09.08.2013 9:48:52"	 value="1,22460635382238E-16"/>
+<item-value id="SimulatedData.Step" timestamp="09.08.2013 9:48:52"	 value="40"/>
