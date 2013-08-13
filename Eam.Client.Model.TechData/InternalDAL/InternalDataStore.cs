@@ -31,5 +31,9 @@ namespace Eam.Client.Model.TechData.InternalDAL {
          * */
 
         public void SaveValues(CommonDataContract.PollItemValue[] pollItemValues) { }
+
+        public void SaveValues(List<CommonDataContract.PollItem> updatedPollItems) {
+            
+        }
     }
 }

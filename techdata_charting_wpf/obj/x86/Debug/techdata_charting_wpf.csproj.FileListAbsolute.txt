@@ -1,0 +1,13 @@
+D:\Documents\Projects\Github\PollTechData\techdata_charting_wpf\bin\Debug\techdata_charting_wpf.exe
+D:\Documents\Projects\Github\PollTechData\techdata_charting_wpf\bin\Debug\techdata_charting_wpf.pdb
+D:\Documents\Projects\Github\PollTechData\techdata_charting_wpf\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\Documents\Projects\Github\PollTechData\techdata_charting_wpf\obj\x86\Debug\MainWindow.baml
+D:\Documents\Projects\Github\PollTechData\techdata_charting_wpf\obj\x86\Debug\MainWindow.g.cs
+D:\Documents\Projects\Github\PollTechData\techdata_charting_wpf\obj\x86\Debug\App.g.cs
+D:\Documents\Projects\Github\PollTechData\techdata_charting_wpf\obj\x86\Debug\techdata_charting_wpf_MarkupCompile.cache
+D:\Documents\Projects\Github\PollTechData\techdata_charting_wpf\obj\x86\Debug\techdata_charting_wpf.g.resources
+D:\Documents\Projects\Github\PollTechData\techdata_charting_wpf\obj\x86\Debug\techdata_charting_wpf.Properties.Resources.resources
+D:\Documents\Projects\Github\PollTechData\techdata_charting_wpf\obj\x86\Debug\GenerateResource.read.1.tlog
+D:\Documents\Projects\Github\PollTechData\techdata_charting_wpf\obj\x86\Debug\GenerateResource.write.1.tlog
+D:\Documents\Projects\Github\PollTechData\techdata_charting_wpf\obj\x86\Debug\techdata_charting_wpf.exe
+D:\Documents\Projects\Github\PollTechData\techdata_charting_wpf\obj\x86\Debug\techdata_charting_wpf.pdb

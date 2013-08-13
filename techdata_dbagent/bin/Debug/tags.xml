@@ -1,14 +1,10 @@
 <?xml version="1.0" encoding="WINDOWS-1251"?>
 <data-sources>
-	<data-source code="1" type="opc" name="Advosol.SimDAServer.1" hostname="localhost" poll-delay="1000">
+	<data-source code="1" type="opc" name="Advosol.SimDAServer.1" hostname="localhost" poll-delay="5000">
 		<group code="1" name="default">
 			<item code="1" name="SimulatedData.Random" is-pack="false"/>
 			<item code="2" name="SimulatedData.Ramp" is-pack="false"/>
 			<item code="3" name="SimulatedData.Signal" is-pack="false"/>
-		</group>
-	</data-source>
-	<data-source code="2" type="opc" name="Advosol.SimDAServer.1" hostname="localhost" poll-delay="1000">
-		<group code="1" name="default">
 			<item code="4" name="SimulatedData.Sine" is-pack="false"/>
 			<item code="5" name="SimulatedData.Step" is-pack="true" pack-length="16">	
 				<sub-item code="1" name="d_cl_o" offset="0" count="1"/>

@@ -54,9 +54,10 @@ namespace techdata_dbagent {
 
             FillMonitorItems(configuration);
 
-            IDataStore dataStore = new SQLDataStore();
+            IDataStore dataStore = new SQLDataStore(Properties.Settings.Default.ConnectingString);
+            TDProcessManager processManager = null;
             ShowConsoleMessage("Init process manager");
-            TDProcessManager processManager = new TDProcessManager(configuration, dataStore);
+            processManager = new TDProcessManager(configuration, dataStore);
             ShowConsoleMessage("Start poll process");
             processManager.StartAllProcesses();
             DateTime lastUpdateStamp;
@@ -65,7 +66,7 @@ namespace techdata_dbagent {
             string itemValue;
             System.Threading.Thread.Sleep(1000);
             while (!isStop) {
-                if (lastUpdateStamp != processManager.CurrentDataManager.GetLastUpdatedTimestamp) {
+                /*if (lastUpdateStamp != processManager.CurrentDataManager.GetLastUpdatedTimestamp) {
                     foreach (PollItem item in _monitorPollItems) {
                         try {
                             itemValue = item.GetLastValue().Value.ToString();
@@ -76,12 +77,16 @@ namespace techdata_dbagent {
                         }
                     }
                     lastUpdateStamp = processManager.CurrentDataManager.GetLastUpdatedTimestamp;
-                    System.Threading.Thread.Sleep(2000);
-                }
+                }*/
+                
+                // delay 10 min
+                System.Threading.Thread.Sleep(6000);
             }
-            processManager.StopAllProcesses();
-            ShowConsoleMessage("Stop poll process");
-            autoResetEvent.Set();
+            if (processManager != null) {
+                processManager.StopAllProcesses();
+                ShowConsoleMessage("Stop poll process");
+                autoResetEvent.Set();
+            }
         }
 
         private static void FillMonitorItems(TDConfiguration configuration) {

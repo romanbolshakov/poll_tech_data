@@ -34,7 +34,7 @@ namespace Eam.Client.Model.TechData.InternalDAL {
         private LogTimeInterval _currentLogTimeInterval;
 
         internal LogFileDataStore() {
-            _currentLogTimeInterval = LogTimeInterval.minute;
+            _currentLogTimeInterval = LogTimeInterval.day;
             LOG_BASE_PATH = Properties.Settings.Default.Log_file_base_path;
             CreateNewLogFile();
             _xmlDocument = new System.Xml.XmlDocument();
@@ -100,15 +100,16 @@ namespace Eam.Client.Model.TechData.InternalDAL {
         /// Save new values (Implementation of public interface)
         /// </summary>
         /// <param name="pollItemValues"></param>
-        public void SaveValues(CommonDataContract.PollItemValue[] pollItemValues) {
+        public void SaveValues(List<CommonDataContract.PollItem> updatedPollItems) {
             if (IsLogFileObsolete(_currentLogTimeInterval)) {
                 CreateNewLogFile();
             }
-
+            CommonDataContract.PollItemValue currentPollItemValue;
             if (_streamWriter != null) {
                 string writeString;
-                foreach (var currentPollItemValue in pollItemValues) {
+                foreach (var currentPollItem in updatedPollItems) {
                     try {
+                        currentPollItemValue = currentPollItem.GetLastValue();
                         writeString = CreateLogString(currentPollItemValue);
                         _streamWriter.WriteLine(writeString);
                         _streamWriter.Flush();
@@ -118,45 +119,8 @@ namespace Eam.Client.Model.TechData.InternalDAL {
                     }
                 }
             }
-
         }
-        /*
-        public void SaveValues(CommonDataContract.PollItemValue[] pollItemValues) {
-            if (IsLogFileObsolete(_currentLogTimeInterval)) {
-                CreateNewLogFile();
-            }
-
-            if (_streamWriter != null) {
-                System.Xml.XmlNode newNode;
-                System.Xml.XmlAttribute newAttribure;
-                foreach (var currentPollItemValue in pollItemValues) {
-                    try {
-                        newNode = _xmlDocument.CreateElement("item-value");
-                        newAttribure = _xmlDocument.CreateAttribute("id");
-                        newAttribure.Value = currentPollItemValue.ItemID;
-                        newNode.Attributes.Append(newAttribure);
-                        _xmlDocument.AppendChild(newNode);
-
-                        newAttribure = _xmlDocument.CreateAttribute("timestamp");
-                        newAttribure.Value = currentPollItemValue.Timestamp.ToShortDateString() + " " +currentPollItemValue.Timestamp.ToLongTimeString();
-                        newNode.Attributes.Append(newAttribure);
-                        _xmlDocument.AppendChild(newNode);
-
-
-                        newAttribure = _xmlDocument.CreateAttribute("value");
-                        newAttribure.Value = currentPollItemValue.Value.ToString();
-                        newNode.Attributes.Append(newAttribure);
-                        _xmlDocument.AppendChild(newNode);
-                    }
-                    catch (Exception e) {
-                        TDInternalLogger.GetLogger().LogException(e);
-                    }
-                }
-                _xmlDocument.Save(_streamWriter);
-            }
-
-        }
-        */
+       
         private string CreateLogString(CommonDataContract.PollItemValue currentPollItemValue) {
             //return String.Format("{0}\t{1} {2}\t{3}",
             //               currentPollItemValue.ItemID,
@@ -170,6 +134,5 @@ namespace Eam.Client.Model.TechData.InternalDAL {
                 currentPollItemValue.Value.ToString());
         }
 
-        
     }
 }
