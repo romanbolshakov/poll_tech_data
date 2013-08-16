@@ -47,9 +47,15 @@ namespace Eam.Client.Model.TechData {
             TDPollProcess newProcess;
             foreach (TDDataSource currentDataSource in configuration.GetDataSources) {
                 switch (currentDataSource.DataSourceType) {
-                    case TDDataSource.TDDataSourceType.OPC:
+                    case TDDataSource.TDDataSourceType.OPC_V2:
                         if (currentDataSource is TDOpcDataSource) {
-                            newProcess = CreateOPCPollProcess(currentDataSource as TDOpcDataSource, currentDataManager);
+                            newProcess = CreateOPCV2PollProcess(currentDataSource as TDOpcDataSource, currentDataManager);
+                            _pollProcesses.Add(newProcess);
+                        }
+                        break;
+                    case TDDataSource.TDDataSourceType.OPC_V3:
+                        if (currentDataSource is TDOpcDataSource) {
+                            newProcess = CreateOPCV3PollProcess(currentDataSource as TDOpcDataSource, currentDataManager);
                             _pollProcesses.Add(newProcess);
                         }
                         break;
@@ -57,8 +63,13 @@ namespace Eam.Client.Model.TechData {
             }
         }
 
-        private TDPollProcess CreateOPCPollProcess(TDOpcDataSource opcDataSource, TDDataManager currentDataManager) {
-            TDOpcPollProcess newOpcPollProcess = new TDOpcPollProcess(opcDataSource.OpcServer, currentDataManager, opcDataSource.PollDelay);
+        private TDPollProcess CreateOPCV2PollProcess(TDOpcDataSource opcDataSource, TDDataManager currentDataManager) {
+            TDOpcV2PollProcess newOpcPollProcess = new TDOpcV2PollProcess(opcDataSource.OpcServer, currentDataManager, opcDataSource.PollDelay);
+            return newOpcPollProcess;
+        }
+
+        private TDPollProcess CreateOPCV3PollProcess(TDOpcDataSource opcDataSource, TDDataManager currentDataManager) {
+            TDOpcV3PollProcess newOpcPollProcess = new TDOpcV3PollProcess(opcDataSource.OpcServer, currentDataManager, opcDataSource.PollDelay);
             return newOpcPollProcess;
         }
 

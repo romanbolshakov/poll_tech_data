@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="WINDOWS-1251"?>
+<data-sources>
+	<data-source code="1" type="opc" name="CoDeSys.OPC.02" hostname="localhost" poll-delay="1000">
+		<group code="1" name="default">
+			<item code="16" name="PLC2promyv:.fq1_i" is-pack="false"/>
+		</group>
+	</data-source>
+</data-sources>

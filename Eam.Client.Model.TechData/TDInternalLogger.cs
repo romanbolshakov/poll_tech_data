@@ -5,15 +5,21 @@ using System.Text;
 using System.IO;
 
 namespace Eam.Client.Model.TechData {
-    internal class TDInternalLogger {
+    public class TDInternalLogger {
 
         private static TDInternalLogger _instance;
 
-        internal static TDInternalLogger GetLogger() {
+        public static TDInternalLogger GetLogger() {
             if (_instance == null) {
                 _instance = new TDInternalLogger();
             }
             return _instance;
+        }
+
+        public event EventHandler<MyEventArgs.LogMessageEventArgs> AddNewLogMessageEvent;
+        private void OnAddNewLogMessageEvent(string logMessage) {
+            if (AddNewLogMessageEvent != null)
+                AddNewLogMessageEvent(this, new MyEventArgs.LogMessageEventArgs(logMessage));
         }
 
         private string _logBasePath = ".\\Log\\";
@@ -33,6 +39,7 @@ namespace Eam.Client.Model.TechData {
                     source, message);
                 _logStreamWriter.WriteLine(logMessage);
                 _logStreamWriter.Flush();
+                OnAddNewLogMessageEvent(logMessage);
             }
         }
 

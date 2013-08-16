@@ -35,7 +35,7 @@ namespace Eam.Client.Model.TechData {
                     foreach (System.Xml.XmlNode dataSourceNode in dataSourcesNode) {
                         if (dataSourceNode.Name == "data-source") {
                             dataSourceType = dataSourceNode.Attributes["type"].Value.ToString();
-                            if (dataSourceType.ToLower() == "opc") {
+                            if (dataSourceType.ToLower().Substring(0,3) == "opc") {
                                 dataSourceInstance = CreateOPCDataSourceByXml(dataSourceNode);
                                 configuration.GetDataSources.AddDataSource(dataSourceInstance);
                             }
@@ -47,7 +47,16 @@ namespace Eam.Client.Model.TechData {
         }
 
         private static TDDataSource CreateOPCDataSourceByXml(System.Xml.XmlNode dataSourceNode) {
-            TDOpcDataSource opcDataSource = new TDOpcDataSource();
+            TDOpcDataSource opcDataSource;
+
+            string dataSourceType = dataSourceNode.Attributes["type"].Value.ToString();
+            if (dataSourceType.ToLower() == "opc_v3") {
+                opcDataSource = new TDOpcV3DataSource();
+            }
+            // OPC_V2 is created by default
+            else {
+                opcDataSource = new TDOpcV2DataSource();
+            }
             OPCServer opcServer = new OPCServer();
             opcServer.HostName = dataSourceNode.Attributes["hostname"].Value.ToString();
             opcServer.ServerName = dataSourceNode.Attributes["name"].Value.ToString();

@@ -47,9 +47,10 @@ namespace techdata_charting_wpf {
 
             var compositeDataSource = new CompositeDataSource(x_valuesDataSource, y_valuesDataSource);
 
-            chartPlotter.AddLineGraph(compositeDataSource);
+
+            //chartPlotter.AddLineGraph(compositeDataSource);
                         
-            chartPlotter.Viewport.FlowDirection = FlowDirection.RightToLeft;
+            //chartPlotter.Viewport.FlowDirection = FlowDirection.RightToLeft;
             //chartPlotter.Viewport.FitToView();
 
         }

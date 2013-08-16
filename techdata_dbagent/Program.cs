@@ -122,7 +122,7 @@ namespace techdata_dbagent {
             opcGroup.Items.Add(opcItem);
             _monitorPollItems.Add(opcItem);
 
-            TDOpcDataSource opcDataSource = new TDOpcDataSource();
+            TDOpcDataSource opcDataSource = new TDOpcV2DataSource();
             opcDataSource.OpcServer = opcServer;
 
             configuration.GetDataSources.AddDataSource(opcDataSource);

@@ -11,7 +11,7 @@
       </Path>
     </AssociationLine>
     <TypeIdentifier>
-      <HashCode>AAAAAACAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AABAAACAQAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAA=</HashCode>
       <FileName>TDConfiguration.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
@@ -21,12 +21,12 @@
   <Class Name="Eam.Client.Model.TechData.TDProcessManager">
     <Position X="6" Y="3.75" Width="2" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAQQAAAAIAAAAAQAAAAAABAAAAAAAEAA=</HashCode>
+      <HashCode>AAAAAAAACAEAAQQAAAAIAAAAAQCAAAAABAAAAAAAIAA=</HashCode>
       <FileName>TDProcessManager.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
-      <Field Name="_currentConfiguration" />
       <Field Name="_currentDataManager" />
+      <Field Name="_currentConfiguration" />
     </ShowAsAssociation>
     <ShowAsCollectionAssociation>
       <Field Name="_pollProcesses" />
@@ -38,7 +38,7 @@
       <Compartment Name="Fields" Collapsed="true" />
     </Compartments>
     <TypeIdentifier>
-      <HashCode>AAAAQAAAAAAACAAAGAAAQAAAAAAAAAABACAAAAAAAAA=</HashCode>
+      <HashCode>AAAQQAAAAAAAAAAAGAAAQAAAAEAAAAgBACAAAAAQCAA=</HashCode>
       <FileName>TDDataBuffer.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
@@ -47,8 +47,15 @@
   </Class>
   <Class Name="Eam.Client.Model.TechData.TDDataManager">
     <Position X="8.5" Y="1.25" Width="1.5" />
+    <NestedTypes>
+      <Delegate Name="Eam.Client.Model.TechData.TDDataManager.UpdateExternalDataStore" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>TDDataManager.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Delegate>
+    </NestedTypes>
     <TypeIdentifier>
-      <HashCode>AAAAQAAAAAAACQAAAAAAAAAAAAAAAAAAAAAAAAQAAAA=</HashCode>
+      <HashCode>gAIAQAAAABAACQIAAAAAAAAAAAAAAIAAAAAAAAQACAA=</HashCode>
       <FileName>TDDataManager.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
@@ -59,14 +66,14 @@
   <Class Name="Eam.Client.Model.TechData.TDDataSource" Collapsed="true">
     <Position X="1.5" Y="1.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAEAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>TDDataSource.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Eam.Client.Model.TechData.TDDataSourceCollection" Collapsed="true" BaseTypeListCollapsed="true">
     <Position X="1.25" Y="0.5" Width="2.25" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAABAAAAAAAAAAQBgAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAABAACAAAAAAAQBgAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>TDDataSourceCollection.cs</FileName>
     </TypeIdentifier>
     <ShowAsCollectionAssociation>
@@ -82,16 +89,16 @@
     </TypeIdentifier>
   </Class>
   <Class Name="Eam.Client.Model.TechData.TDOpcPollProcess" Collapsed="true">
-    <Position X="1.75" Y="6" Width="1.5" />
+    <Position X="1.75" Y="7.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AQEAAACAAAAAAAAAAAAAEAgAAAAACAQAAAAgAAAAAAA=</HashCode>
+      <HashCode>AQEAAACAAAAAAAAAAAAAEAgAAAAAAAQAAAAgAAAAAAA=</HashCode>
       <FileName>TDOpcPollProcess.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Eam.Client.Model.TechData.TDPollProcess" Collapsed="true">
-    <Position X="1.75" Y="4.75" Width="1.5" />
+    <Position X="1.75" Y="6.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AgAAAAAAGAAAAAAAAAAICAAAAAAACAAAAAAgAAAAQAA=</HashCode>
+      <HashCode>AgAAAAAAGAAAAAAAAAAICAAAAAAACAAAAAAgAIAARAA=</HashCode>
       <FileName>TDPollProcess.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -102,15 +109,8 @@
   </Class>
   <Class Name="Eam.Client.Model.TechData.CommonDataContract.PollItem" Collapsed="true">
     <Position X="14.5" Y="3.75" Width="1.5" />
-    <NestedTypes>
-      <Class Name="Eam.Client.Model.TechData.CommonDataContract.PollItem.PollItemValueUpdatedEventArgs" Collapsed="true">
-        <TypeIdentifier>
-          <NewMemberFileName>CommonDataContract\PollItem.cs</NewMemberFileName>
-        </TypeIdentifier>
-      </Class>
-    </NestedTypes>
     <TypeIdentifier>
-      <HashCode>AAAEAAAAAAhAAAAAAQAAAAAACEEEAAAAASAAABAAAAA=</HashCode>
+      <HashCode>IAAEIAAAAAhAAAAAAQgAAAgACEEEAAAEASAAABACAAA=</HashCode>
       <FileName>CommonDataContract\PollItem.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -134,14 +134,42 @@
   <Class Name="Eam.Client.Model.TechData.OPCDataContract.OPCItemValue">
     <Position X="16.25" Y="5.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAQAQBIAAAQBAAAAAAQAAAAAAAAAEAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAQAQBIAAAQBAAAAAAQAAAAAAAAAEAQAAAAAAAAA=</HashCode>
       <FileName>OPCDataContract\OPCItemValue.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Eam.Client.Model.TechData.TDOpcV3PollProcess" Collapsed="true">
+    <Position X="1.25" Y="10" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAA=</HashCode>
+      <FileName>TDOpcV3PollProcess.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Eam.Client.Model.TechData.TDOpcV3DataSource" Collapsed="true">
+    <Position X="1" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>TDOpcV3DataSource.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Eam.Client.Model.TechData.TDOpcV2PollProcess" Collapsed="true">
+    <Position X="3.25" Y="10" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAA=</HashCode>
+      <FileName>TDOpcV2PollProcess.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Eam.Client.Model.TechData.TDOpcV2DataSource" Collapsed="true">
+    <Position X="3" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>TDOpcV2DataSource.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Interface Name="Eam.Client.Model.TechData.Interfaces.IDataStore" Collapsed="true">
     <Position X="11.25" Y="0.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAA=</HashCode>
       <FileName>Interfaces\IDataStore.cs</FileName>
     </TypeIdentifier>
   </Interface>

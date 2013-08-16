@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="WINDOWS-1251"?>
+<data-sources>
+	<data-source code="1" type="opc" name="CodeSys.OPC.02" hostname="localhost" poll-delay="5000">
+		<group code="1" name="default">
+			
+			<item code="16" name="PLC2promyv:.fq1_i" is-pack="false"/>
+			<item code="17" name="PLC2promyv.fq2_i" is-pack="false"/>
+			<item code="18" name="PLC2promyv.fq3_i" is-pack="false"/>
+			<item code="19" name="PLC2promyv.dd_out_rchv_i" is-pack="false"/>
+			<item code="20" name="PLC2promyv.dd_posle_skv_i" is-pack="false"/>
+			<item code="21" name="PLC2promyv.dd_compress_i" is-pack="false"/>
+			<item code="22" name="PLC2promyv.dd_do_aero_i" is-pack="false"/>
+			<item code="23" name="PLC2promyv.dd_posle_aero_i" is-pack="false"/>
+		</group>
+	</data-source>
+</data-sources>

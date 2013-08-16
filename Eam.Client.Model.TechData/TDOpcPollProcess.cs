@@ -5,11 +5,12 @@ using System.Text;
 
 using Eam.Client.Model.TechData.OPCDataContract;
 
+
 namespace Eam.Client.Model.TechData {
-    internal class TDOpcPollProcess: TDPollProcess {
-        private OPCDA.NET.OpcServer _coreOpcServer;
-        private string[] _opcItemNames;
-        private bool _isServerConnected;
+    internal abstract class TDOpcPollProcess: TDPollProcess {
+        protected OPCDA.NET.OpcServer _coreOpcServer;
+        protected string[] _opcItemNames;
+        protected bool _isServerConnected;
 
         /// <summary>
         /// .ctor
@@ -17,7 +18,7 @@ namespace Eam.Client.Model.TechData {
         /// <param name="opcServer">OPC server instance (intrenal)</param>
         /// <param name="currentDataManager">Cerrent data manager</param>
         /// <param name="pollDelay">Poll delay in milliseconds (500 ms by default)</param>
-        internal TDOpcPollProcess(OPCServer opcServer, TDDataManager currentDataManager, int pollDelay) :
+        protected TDOpcPollProcess(OPCServer opcServer, TDDataManager currentDataManager, int pollDelay) :
             base(currentDataManager, pollDelay, opcServer.FullNetworkName) {
             _isServerConnected = ConnectToServer(opcServer.HostName, opcServer.ServerName);
             _opcItemNames = GetOpcItemNames(opcServer);
@@ -25,20 +26,7 @@ namespace Eam.Client.Model.TechData {
             currentDataManager.RegisterPollItems(pollItems);
         }
 
-        protected override CommonDataContract.PollItemValue[] Poll() {
-            try {
-                // maxAge - это насколько "старое" в милисекундах может быть значение, если 0 то допускается только значение "от устройства"
-                // в противном случае значение может быть получено из кэш'а
-                OPCDA.NET.ItemValue[] values = _coreOpcServer.Read(_opcItemNames, 10);
-                CommonDataContract.PollItemValue[] pollItemValues = ConvertToPollItemValues(values);
-                return pollItemValues;
-            }
-            catch {
-                return null;
-            }
-        }
-
-        private CommonDataContract.PollItemValue[] ConvertToPollItemValues(OPCDA.NET.ItemValue[] values) {
+        protected CommonDataContract.PollItemValue[] ConvertToPollItemValues(OPCDA.NET.ItemValue[] values) {
             List<CommonDataContract.PollItemValue> result = new List<CommonDataContract.PollItemValue>();
             OPCDataContract.OPCItemValue newItemValue;
             foreach (var currentOPCItemValue in values) {
@@ -57,7 +45,8 @@ namespace Eam.Client.Model.TechData {
                 }
                 return false;
             }
-            catch {
+            catch(Exception ex) {
+                TDInternalLogger.GetLogger().LogException(new Exception("OPC Server connection failed", ex));
                 return false;
             }
         }

@@ -31,22 +31,22 @@ namespace Eam.Client.Model.TechData {
             try {
                 updatedPollItems = UpdateValuesToDataBuffer(pollItemValues);
             }
-            catch (Exception) {
-                throw;
+            catch (Exception ex) {
+                TDInternalLogger.GetLogger().LogException(ex);
             }
             try {
                 if (updatedPollItems != null)
                     _externalDataStore.SaveValues(updatedPollItems);
             }
-            catch (Exception) {
-                throw;
+            catch (Exception ex) {
+                TDInternalLogger.GetLogger().LogException(ex);
             }
             try {
                 if (updatedPollItems != null)
                     _logDataStore.SaveValues(updatedPollItems);
             }
-            catch (Exception) {
-                throw;
+            catch (Exception ex) {
+                TDInternalLogger.GetLogger().LogException(ex);
             }
         }
 
@@ -116,8 +116,8 @@ namespace Eam.Client.Model.TechData {
             CommonDataContract.PollItem currentPollItem, 
             CommonDataContract.PollItemValue currentItemValue,
             List<CommonDataContract.PollItem> resultItemList) {
-            int intValue = Convert.ToInt16(currentItemValue.Value);
-            bool[] fullBits = new bool[16];
+            Int64 intValue = Convert.ToInt64(currentItemValue.Value);
+            bool[] fullBits = new bool[currentPollItem.PackLength];
             char[] bits = Convert.ToString(intValue, 2).ToCharArray();
             for (int i = 1; i <= bits.Length; i++) {
                 if (bits[bits.Length-i] == '1')
@@ -125,11 +125,13 @@ namespace Eam.Client.Model.TechData {
             }
             
             CommonDataContract.PollItemValue newPollItemValue;
+            int lastIndex = fullBits.Length - 1;
             foreach (var subItem in currentPollItem.SubItems) {
                 newPollItemValue = new CommonDataContract.PollItemValue();
                 newPollItemValue.ItemID = subItem.ItemName;
                 newPollItemValue.Timestamp = currentItemValue.Timestamp;
-                newPollItemValue.Value = fullBits[subItem.BitOffset];
+                /// Берем смещение от конца массива (т.е. при offset = 0 надо взять последний элемент)
+                newPollItemValue.Value = fullBits[lastIndex - subItem.BitOffset];
                 subItem.AddValue(newPollItemValue.Timestamp, newPollItemValue);
                 resultItemList.Add(subItem);
             }

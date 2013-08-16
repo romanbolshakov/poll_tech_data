@@ -18,7 +18,7 @@ namespace test_EamTechDataModel_console {
         private static System.Threading.AutoResetEvent autoResetEvent;
 
         static void Main(string[] args) {
-
+            TDInternalLogger.GetLogger().AddNewLogMessageEvent += new EventHandler<Eam.Client.Model.TechData.MyEventArgs.LogMessageEventArgs>(Program_AddNewLogMessageEvent);
             isStop = false;
             if (args.Length > 0) {
                 xmlConfigurationFileName = args[0];
@@ -35,6 +35,10 @@ namespace test_EamTechDataModel_console {
             Console.WriteLine("Waiting for stop polling");
             autoResetEvent = new System.Threading.AutoResetEvent(false);
             autoResetEvent.WaitOne();
+        }
+
+        static void Program_AddNewLogMessageEvent(object sender, Eam.Client.Model.TechData.MyEventArgs.LogMessageEventArgs e) {
+            Console.WriteLine(e.LogMessage);
         }
 
         private static void UpdateMonitor() {
@@ -108,7 +112,7 @@ namespace test_EamTechDataModel_console {
             opcGroup.Items.Add(opcItem);
             _monitorPollItems.Add(opcItem);
 
-            TDOpcDataSource opcDataSource = new TDOpcDataSource();
+            TDOpcDataSource opcDataSource = new TDOpcV2DataSource();
             opcDataSource.OpcServer = opcServer;
 
             configuration.GetDataSources.AddDataSource(opcDataSource);

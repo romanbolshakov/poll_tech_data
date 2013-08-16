@@ -10,7 +10,7 @@ namespace Eam.Client.Model.TechData {
     /// </summary>
     public abstract class TDDataSource {
 
-        public enum TDDataSourceType { OPC, Fake };
+        public enum TDDataSourceType { OPC_V2, OPC_V3, Fake };
 
         /// <summary>
         /// [Read only]

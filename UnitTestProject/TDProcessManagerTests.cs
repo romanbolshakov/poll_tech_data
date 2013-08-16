@@ -66,7 +66,7 @@ namespace UnitTestProject {
 
             opcGroup.Items.Add(opcItem);
 
-            TDOpcDataSource opcDataSource = new TDOpcDataSource();
+            TDOpcDataSource opcDataSource = new TDOpcV2DataSource();
             opcDataSource.OpcServer = opcServer;
             opcDataSource.PollDelay = 1000;
 

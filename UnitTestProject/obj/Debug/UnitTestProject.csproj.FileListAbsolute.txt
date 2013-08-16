@@ -10,3 +10,15 @@ D:\Documents\Projects\Github\PollTechData\UnitTestProject\obj\Debug\ResolveAssem
 D:\Documents\Projects\Github\PollTechData\UnitTestProject\obj\Debug\UnitTestProject.dll
 D:\Documents\Projects\Github\PollTechData\UnitTestProject\obj\Debug\UnitTestProject.pdb
 D:\Documents\Projects\Github\PollTechData\UnitTestProject\bin\Debug\TechDatabase.sdf
+D:\Documents\Projects\Github\PollTechData_14_08_2013\PollTechData\UnitTestProject\bin\Debug\TechDatabase.sdf
+D:\Documents\Projects\Github\PollTechData_14_08_2013\PollTechData\UnitTestProject\bin\Debug\UnitTestProject.dll
+D:\Documents\Projects\Github\PollTechData_14_08_2013\PollTechData\UnitTestProject\bin\Debug\UnitTestProject.pdb
+D:\Documents\Projects\Github\PollTechData_14_08_2013\PollTechData\UnitTestProject\bin\Debug\Eam.Client.Model.TechData.dll
+D:\Documents\Projects\Github\PollTechData_14_08_2013\PollTechData\UnitTestProject\bin\Debug\OpcNetBase.dll
+D:\Documents\Projects\Github\PollTechData_14_08_2013\PollTechData\UnitTestProject\bin\Debug\OpcDaNetB.dll
+D:\Documents\Projects\Github\PollTechData_14_08_2013\PollTechData\UnitTestProject\bin\Debug\Eam.Client.Model.TechData.pdb
+D:\Documents\Projects\Github\PollTechData_14_08_2013\PollTechData\UnitTestProject\bin\Debug\OpcNetBase.xml
+D:\Documents\Projects\Github\PollTechData_14_08_2013\PollTechData\UnitTestProject\bin\Debug\OpcDaNetB.xml
+D:\Documents\Projects\Github\PollTechData_14_08_2013\PollTechData\UnitTestProject\obj\Debug\ResolveAssemblyReference.cache
+D:\Documents\Projects\Github\PollTechData_14_08_2013\PollTechData\UnitTestProject\obj\Debug\UnitTestProject.dll
+D:\Documents\Projects\Github\PollTechData_14_08_2013\PollTechData\UnitTestProject\obj\Debug\UnitTestProject.pdb

@@ -42,7 +42,7 @@
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
-    <OutputPath>bin\Release\</OutputPath>
+    <OutputPath>bin\Debug\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -66,6 +66,7 @@
     <Compile Include="CommonDataContract\PollItemValue.cs" />
     <Compile Include="CommonDataContract\PollItem.cs" />
     <Compile Include="CommonDataContract\SubPollItem.cs" />
+    <Compile Include="MyEventArgs\LogMessageEventArgs.cs" />
     <Compile Include="Interfaces\IDataStore.cs" />
     <Compile Include="InternalDAL\InternalDataStore.cs" />
     <Compile Include="InternalDAL\LogFileDataStore.cs" />
@@ -84,6 +85,10 @@
     <Compile Include="TDInternalLogger.cs" />
     <Compile Include="TDOpcDataSource.cs" />
     <Compile Include="TDOpcPollProcess.cs" />
+    <Compile Include="TDOpcV2DataSource.cs" />
+    <Compile Include="TDOpcV2PollProcess.cs" />
+    <Compile Include="TDOpcV3DataSource.cs" />
+    <Compile Include="TDOpcV3PollProcess.cs" />
     <Compile Include="TDPollProcess.cs" />
     <Compile Include="TDConfiguration.cs" />
     <Compile Include="TDDataBuffer.cs" />

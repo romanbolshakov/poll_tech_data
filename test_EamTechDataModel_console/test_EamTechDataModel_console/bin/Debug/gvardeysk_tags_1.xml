@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="WINDOWS-1251"?>
+<data-sources>
+	<data-source code="1" type="opc" name="CodeSys.OPC.02" hostname="localhost" poll-delay="5000">
+		<group code="1" name="default">
+			
+			<item code="16" name="PLC2promyv:.fq1_i" is-pack="false"/>
+			<item code="17" name="PLC2promyv:.fq2_i" is-pack="false"/>
+			<item code="18" name="PLC2promyv:.fq3_i" is-pack="false"/>
+			<item code="19" name="PLC2promyv:.dd_out_rchv_i" is-pack="false"/>
+			<item code="20" name="PLC2promyv:.dd_posle_skv_i" is-pack="false"/>
+			<item code="21" name="PLC2promyv:.dd_compress_i" is-pack="false"/>
+			<item code="22" name="PLC2promyv:.dd_do_aero_i" is-pack="false"/>
+			<item code="23" name="PLC2promyv:.dd_posle_aero_i" is-pack="false"/>
+			<item code="12" name="PLC2promyv:.ds_mv32dn_144_1" is-pack="true" pack-length="16">
+				<sub-item code="1" name="electroliz1_avto" offset="0" count="1"/>
+				<sub-item code="2" name="electroliz2_avto" offset="1" count="1"/>
+				<sub-item code="3" name="kl_soli_brrs1_avto" offset="2" count="1"/>
+				<sub-item code="4" name="kl_vody_brrs1_avto" offset="3" count="1"/>
+				<sub-item code="5" name="kl_soli_brrs2_avto" offset="4" count="1"/>
+				<sub-item code="6" name="kl_vody_brrs2_avto" offset="5" count="1"/>
+				<sub-item code="7" name="vent_pritoch_avto" offset="6" count="1"/>
+				<sub-item code="8" name="vent_vytya_avto" offset="7" count="1"/>
+				<sub-item code="9" name="dozator1_f_avto" offset="8" count="1"/>
+				<sub-item code="10" name="dozator2_f_avto" offset="9" count="1"/>
+				<sub-item code="12" name="dozator_cl_avto" offset="11" count="1"/>
+				<sub-item code="13" name="kl_vody_sr_avto" offset="12" count="1"/>
+				<sub-item code="14" name="vent1_bakov_avto" offset="13" count="1"/>
+				<sub-item code="15" name="vent2_bakov_avto" offset="14" count="1"/>
+				<sub-item code="16" name="nasos_soli_avto" offset="15" count="1"/>
+			</item>
+			<item code="13" name="PLC2promyv:.ds_mv32dn_144_2" is-pack="true" pack-length="16">
+				<sub-item code="1" name="nasos_f_avto" offset="0" count="1"/>
+				<sub-item code="3" name="mesh_f_avto" offset="2" count="1"/>
+				<sub-item code="4" name="gavar_shit" offset="3" count="1"/>
+				<sub-item code="5" name="filtr_vody1_avto" offset="4" count="1"/>
+				<sub-item code="6" name="filtr_vody2_avto" offset="5" count="1"/>
+				<sub-item code="7" name="SAU1_1" offset="6" count="1"/>
+				<sub-item code="8" name="SAU1_2" offset="7" count="1"/>
+				<sub-item code="9" name="SAU1_3" offset="8" count="1"/>
+				<sub-item code="10" name="SAU2_1" offset="9" count="1"/>
+				<sub-item code="11" name="SAU2_2" offset="10" count="1"/>
+				<sub-item code="12" name="SAU2_3" offset="11" count="1"/>
+				<sub-item code="13" name="SAU3_1" offset="12" count="1"/>
+				<sub-item code="14" name="SAU3_2" offset="13" count="1"/>
+				<sub-item code="15" name="SAU3_3" offset="14" count="1"/>
+				<sub-item code="16" name="h2av" offset="15" count="1"/>
+			</item>
+		</group>
+	</data-source>
+</data-sources>

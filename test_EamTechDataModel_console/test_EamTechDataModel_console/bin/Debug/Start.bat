@@ -1,1 +1,1 @@
-test_EamTechDataModel_console.exe tags.xml
+test_EamTechDataModel_console.exe gvardeysk_tags_1.xml

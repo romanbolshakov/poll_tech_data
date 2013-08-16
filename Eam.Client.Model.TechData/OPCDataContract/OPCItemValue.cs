@@ -10,6 +10,7 @@ namespace Eam.Client.Model.TechData.OPCDataContract {
         public int MaxAge { get; internal set; }
         public int ServerHandle { get; internal set; }
         public string Quality { get; internal set; }
+        public short QualityCode { get; internal set; }
         public bool QualitySpecified { get; internal set; }
         public bool TimestampSpecified { get; internal set; }
 
