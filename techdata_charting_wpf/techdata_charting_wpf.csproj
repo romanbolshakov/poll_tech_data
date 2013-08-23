@@ -36,6 +36,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AvalonControlsLibrary, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\AvalonControlsLibrary.dll</HintPath>
+    </Reference>
     <Reference Include="DynamicDataDisplay, Version=0.3.0.0, Culture=neutral, PublicKeyToken=5b7d744a7263923f, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>bin\Debug\DynamicDataDisplay.dll</HintPath>
@@ -62,16 +66,29 @@
     <Compile Include="Command\DelegateCommand.cs" />
     <Compile Include="Command\CommandReference.cs" />
     <Compile Include="Model\IDataLoader.cs" />
+    <Compile Include="Model\Item.cs" />
+    <Compile Include="Model\ItemCollection.cs" />
+    <Compile Include="Model\CustomItemCollection.cs" />
     <Compile Include="Model\ItemValue.cs" />
     <Compile Include="Model\ItemValueCollection.cs" />
+    <Compile Include="Model\ItemValueCollectionEventArgs.cs" />
+    <Compile Include="Model\ItemValueMonitor.cs" />
+    <Compile Include="Model\ItemWithValues.cs" />
     <Compile Include="Model\SQLDataLoader.cs" />
     <Compile Include="ProjectContext.cs" />
-    <Compile Include="ViewModel\ChartViewModel.cs" />
-    <Compile Include="ViewModel\ItemsViewModel.cs" />
+    <Compile Include="ViewModel\ChartWorkspaceViewModel.cs" />
+    <Compile Include="ViewModel\CustomItemCollectionViewModel.cs" />
+    <Compile Include="ViewModel\ItemsWorkspaceViewModel.cs" />
+    <Compile Include="ViewModel\ItemWithValuesViewModel.cs" />
     <Compile Include="ViewModel\MainViewModel.cs" />
+    <Compile Include="ViewModel\SingleItemValueViewModel.cs" />
+    <Compile Include="ViewModel\SingleItemViewModel.cs" />
     <Compile Include="ViewModel\ViewModelBase.cs" />
     <Compile Include="View\ChartView.xaml.cs">
       <DependentUpon>ChartView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\ItemsWorkspace.xaml.cs">
+      <DependentUpon>ItemsWorkspace.xaml</DependentUpon>
     </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -90,6 +107,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\ChartView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\ItemsWorkspace.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

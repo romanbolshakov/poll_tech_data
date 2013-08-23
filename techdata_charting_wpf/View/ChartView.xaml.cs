@@ -22,27 +22,39 @@ using Microsoft.Research.DynamicDataDisplay.PointMarkers;
 using Microsoft.Research.DynamicDataDisplay.Properties;
 using Microsoft.Research.DynamicDataDisplay.ViewportRestrictions;
 
+
 namespace techdata_charting_wpf.View {
     /// <summary>
     /// Логика взаимодействия для ChartView.xaml
     /// </summary>
     public partial class ChartView : UserControl {
-        ObservableDataSource<int> o;
-
         public ChartView() {
             InitializeComponent();
-
-            o = new ObservableDataSource<int>(new int[6] { 0, 1, 2, 3, 4, 5 });
-            o.SetXYMapping(x => { return new Point(x, Math.Sin(x)); });
-
-            this.chartPlotter.AddLineGraph(o);
             
         }
 
         private void Button_Click(object sender, RoutedEventArgs e) {
-            o.AppendMany(new int[4] { 6, 7, 8, 9 });
         }
+
+        private void UserControl_Loaded(object sender, RoutedEventArgs e) {
+            ViewModel.ChartWorkspaceViewModel viewModel = this.DataContext as ViewModel.ChartWorkspaceViewModel;
+            viewModel.ItemValuesDataSource.SetXMapping(itemValueViewModel => { 
+                return dateAxis.ConvertToDouble(itemValueViewModel.Timestamp); });
+            viewModel.ItemValuesDataSource.SetYMapping(itemValueViewModel => {
+                if (itemValueViewModel.Value.ToString().ToLower() == "true")
+                    return 1;
+                if (itemValueViewModel.Value.ToString().ToLower() == "false")
+                    return 0;
+                else
+                    return Convert.ToDouble(itemValueViewModel.Value);
+            });
+        }
+
+        
+
+        
+
+        
     }
 
-    
 }

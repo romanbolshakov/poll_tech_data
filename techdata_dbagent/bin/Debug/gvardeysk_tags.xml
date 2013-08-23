@@ -1,0 +1,349 @@
+<?xml version="1.0" encoding="WINDOWS-1251"?>
+<data-sources>
+	<data-source code="1" type="opc" name="Advosol.SimDAServer.1" hostname="localhost" poll-delay="1000">
+		<group code="1" name="default">
+			<item code="1" name="ds_mu32r88_1" is-pack="true">
+				<sub-item code="1" name="d_cl_o" offset="0" count="1"/>
+				<sub-item code="2" name="fltr1_o" offset="1" count="1"/>
+				<sub-item code="3" name="fltr2_o" offset="2" count="1"/>
+				<sub-item code="4" name="fltr3_o" offset="3" count="1"/>
+				<sub-item code="5" name="fltr4_o" offset="4" count="1"/>
+				<sub-item code="6" name="fltr5_o" offset="5" count="1"/>
+				<sub-item code="7" name="fltr6_o" offset="6" count="1"/>
+				<sub-item code="8" name="fltr7_o" offset="7" count="1"/>
+				<sub-item code="9" name="fltr8_o" offset="8" count="1"/>
+				<sub-item code="10" name="fltr9_o" offset="9" count="1"/>
+				<sub-item code="11" name="fltr10_o" offset="10" count="1"/>
+				<sub-item code="12" name="fltr11_o" offset="11" count="1"/>
+				<sub-item code="13" name="fltr12_o" offset="12" count="1"/>
+				<sub-item code="14" name="fltr13_o" offset="13" count="1"/>
+				<sub-item code="15" name="fltr14_o" offset="14" count="1"/>
+				<sub-item code="16" name="fltr15_o" offset="15" count="1"/>
+			</item>
+			<item code="2" name="ds_mu32r88_2" is-pack="true">
+				<sub-item code="1" name="fltr16_o" offset="0" count="1"/>
+				<sub-item code="2" name="hyst_open" offset="1" count="1"/>
+				<sub-item code="3" name="hyst_close" offset="2" count="1"/>
+				<sub-item code="4" name="compr1_o" offset="3" count="1"/>
+				<sub-item code="5" name="compr2_o" offset="4" count="1"/>
+				<sub-item code="6" name="compr3_o" offset="5" count="1"/>
+				<sub-item code="7" name="ozon1_o" offset="6" count="1"/>
+				<sub-item code="8" name="ozon2_o" offset="7" count="1"/>
+				<sub-item code="9" name="ozon3_o" offset="8" count="1"/>
+			</item>
+			<item code="3" name="ds_mu32r88_1_in" is-pack="true">
+				
+			</item>
+			<item code="4" name="ds_mu32r88_2_in" is-pack="true">
+				
+			</item>
+			<item code="5" name="ds_mu32r176_1" is-pack="true">
+				<sub-item code="1" name="h_doz_f1_o" offset="0" count="1"/>
+				<sub-item code="2" name="h_doz_f2_o" offset="1" count="1"/>
+				<sub-item code="4" name="h_vent1_o" offset="3" count="1"/>
+				<sub-item code="5" name="h_vent2_o" offset="4" count="1"/>
+				<sub-item code="6" name="h_nas_soli_o" offset="5" count="1"/>
+				<sub-item code="7" name="h_nas_f_o" offset="6" count="1"/>
+				<sub-item code="9" name="h_mesh_f_o" offset="8" count="1"/>
+				<sub-item code="11" name="h_el1_o" offset="10" count="1"/>
+				<sub-item code="12" name="h_el2_o" offset="11" count="1"/>
+				<sub-item code="13" name="h_kl_sol1_o" offset="12" count="1"/>
+				<sub-item code="14" name="h_kl_vod1_o" offset="13" count="1"/>
+				<sub-item code="15" name="h_kl_sol2_o" offset="14" count="1"/>
+				<sub-item code="16" name="h_kl_vod2_o" offset="15" count="1"/>
+			</item>
+			<item code="6" name="ds_mu32r176_2" is-pack="true">
+				<sub-item code="1" name="h_vent_in_o" offset="0" count="1"/>
+				<sub-item code="2" name="h_vent_out_o" offset="1" count="1"/>
+				<sub-item code="3" name="h_d_cl2_o" offset="2" count="1"/>
+				<sub-item code="4" name="h_kl_vody_o" offset="3" count="1"/>
+				<sub-item code="5" name="h_filtr1_o" offset="4" count="1"/>
+				<sub-item code="6" name="h_filtr2_o" offset="5" count="1"/>
+			</item>
+			
+			<item code="8" name="ds_mu32r176_1_in" is-pack="true">
+				
+			</item>
+			<item code="9" name="ds_mu32r176_2_in" is-pack="true">
+				
+			</item>
+			<item code="10" name="ds_mv32dn_56_1" is-pack="true">
+				<sub-item code="1" name="fltr1" offset="0" count="1"/>
+				<sub-item code="2" name="fltr2" offset="1" count="1"/>
+				<sub-item code="3" name="fltr3" offset="2" count="1"/>
+				<sub-item code="4" name="fltr4" offset="3" count="1"/>
+				<sub-item code="5" name="fltr5" offset="4" count="1"/>
+				<sub-item code="6" name="fltr6" offset="5" count="1"/>
+				<sub-item code="7" name="fltr7" offset="6" count="1"/>
+				<sub-item code="8" name="fltr8" offset="7" count="1"/>
+				<sub-item code="9" name="fltr9" offset="8" count="1"/>
+				<sub-item code="10" name="fltr10" offset="9" count="1"/>
+				<sub-item code="11" name="fltr11" offset="10" count="1"/>
+				<sub-item code="12" name="fltr12" offset="11" count="1"/>
+				<sub-item code="13" name="fltr13" offset="12" count="1"/>
+				<sub-item code="14" name="fltr14" offset="13" count="1"/>
+				<sub-item code="15" name="fltr15" offset="14" count="1"/>
+				<sub-item code="16" name="fltr16" offset="15" count="1"/>
+			</item>
+			<item code="11" name="ds_mv32dn_56_2" is-pack="true">
+				<sub-item code="1" name="compr1_avto" offset="0" count="1"/>
+				<sub-item code="2" name="compr2_avto" offset="1" count="1"/>
+				<sub-item code="3" name="compr3_avto" offset="2" count="1"/>
+				<sub-item code="4" name="ozon1_avto" offset="3" count="1"/>
+				<sub-item code="5" name="ozon2_avto" offset="4" count="1"/>
+				<sub-item code="6" name="ozon3_avto" offset="5" count="1"/>
+				<sub-item code="7" name="zdv_a" offset="6" count="1"/>
+				<sub-item code="8" name="zdv_z" offset="7" count="1"/>
+				<sub-item code="9" name="zdv_o" offset="8" count="1"/>
+				<sub-item code="10" name="sf1_filtrozal" offset="9" count="1"/>
+				<sub-item code="11" name="compr1_on" offset="10" count="1"/>
+				<sub-item code="12" name="compr2_on" offset="11" count="1"/>
+				<sub-item code="13" name="compr3_on" offset="12" count="1"/>
+				<sub-item code="14" name="ozon_term_ok" offset="13" count="1"/>
+				<sub-item code="15" name="zdv_termo" offset="14" count="1"/>
+				<sub-item code="16" name="rele_faz_filtrozal" offset="15" count="1"/>
+			</item>
+			<item code="12" name="ds_mv32dn_144_1" is-pack="true">
+				<sub-item code="1" name="electroliz1_avto" offset="0" count="1"/>
+				<sub-item code="2" name="electroliz2_avto" offset="1" count="1"/>
+				<sub-item code="3" name="kl_soli_brrs1_avto" offset="2" count="1"/>
+				<sub-item code="4" name="kl_vody_brrs1_avto" offset="3" count="1"/>
+				<sub-item code="5" name="kl_soli_brrs2_avto" offset="4" count="1"/>
+				<sub-item code="6" name="kl_vody_brrs2_avto" offset="5" count="1"/>
+				<sub-item code="7" name="vent_pritoch_avto" offset="6" count="1"/>
+				<sub-item code="8" name="vent_vytya_avto" offset="7" count="1"/>
+				<sub-item code="9" name="dozator1_f_avto" offset="8" count="1"/>
+				<sub-item code="10" name="dozator2_f_avto" offset="9" count="1"/>
+				<sub-item code="12" name="dozator_cl_avto" offset="11" count="1"/>
+				<sub-item code="13" name="kl_vody_sr_avto" offset="12" count="1"/>
+				<sub-item code="14" name="vent1_bakov_avto" offset="13" count="1"/>
+				<sub-item code="15" name="vent2_bakov_avto" offset="14" count="1"/>
+				<sub-item code="16" name="nasos_soli_avto" offset="15" count="1"/>
+			</item>
+			<item code="13" name="ds_mv32dn_144_2" is-pack="true">
+				<sub-item code="1" name="nasos_f_avto" offset="0" count="1"/>
+				<sub-item code="3" name="mesh_f_avto" offset="2" count="1"/>
+				<sub-item code="4" name="gavar_shit" offset="3" count="1"/>
+				<sub-item code="5" name="filtr_vody1_avto" offset="4" count="1"/>
+				<sub-item code="6" name="filtr_vody2_avto" offset="5" count="1"/>
+				<sub-item code="7" name="SAU1_1" offset="6" count="1"/>
+				<sub-item code="8" name="SAU1_2" offset="7" count="1"/>
+				<sub-item code="9" name="SAU1_3" offset="8" count="1"/>
+				<sub-item code="10" name="SAU2_1" offset="9" count="1"/>
+				<sub-item code="11" name="SAU2_2" offset="10" count="1"/>
+				<sub-item code="12" name="SAU2_3" offset="11" count="1"/>
+				<sub-item code="13" name="SAU3_1" offset="12" count="1"/>
+				<sub-item code="14" name="SAU3_2" offset="13" count="1"/>
+				<sub-item code="15" name="SAU3_3" offset="14" count="1"/>
+				<sub-item code="16" name="h2av" offset="15" count="1"/>
+			</item>
+			<item code="14" name="dsw1" is-pack="true">
+				<sub-item code="1" name="f4" offset="0" count="1"/>
+				<sub-item code="2" name="promyvka" offset="1" count="1"/>
+				<sub-item code="3" name="p_dd" offset="2" count="1"/>
+				<sub-item code="4" name="time_promyv" offset="3" count="1"/>
+				<sub-item code="5" name="zdv_ddmax" offset="4" count="1"/>
+				<sub-item code="6" name="strt_promyv" offset="5" count="1"/>
+				<sub-item code="7" name="hyst_ok" offset="6" count="1"/>
+				<sub-item code="8" name="zdv_o_ind" offset="7" count="1"/>
+				<sub-item code="9" name="zdv_z_ind" offset="8" count="1"/>
+				<sub-item code="10" name="zdv_mid" offset="9" count="1"/>
+				<sub-item code="11" name="h_el1" offset="10" count="1"/>
+				<sub-item code="12" name="h_el2" offset="11" count="1"/>
+				<sub-item code="13" name="hyst_start" offset="12" count="1"/>
+				<sub-item code="14" name="ppromyv" offset="13" count="1"/>
+				<sub-item code="15" name="man_promyv" offset="14" count="1"/>
+				<sub-item code="16" name="t1m" offset="15" count="1"/>
+				<sub-item code="17" name="hydrolis_ok" offset="16" count="1"/>
+				<sub-item code="18" name="h1" offset="17" count="1"/>
+				<sub-item code="19" name="h2" offset="18" count="1"/>
+				<sub-item code="20" name="h3" offset="19" count="1"/>
+				<sub-item code="21" name="h4" offset="20" count="1"/>
+				<sub-item code="22" name="h5" offset="21" count="1"/>
+				<sub-item code="23" name="h6" offset="22" count="1"/>
+				<sub-item code="24" name="h7" offset="23" count="1"/>
+				<sub-item code="25" name="h8" offset="24" count="1"/>
+				<sub-item code="26" name="h9" offset="25" count="1"/>
+				<sub-item code="27" name="h10" offset="26" count="1"/>
+				<sub-item code="28" name="h11" offset="27" count="1"/>
+				<sub-item code="29" name="h12" offset="28" count="1"/>
+				<sub-item code="30" name="h13" offset="29" count="1"/>
+				<sub-item code="31" name="h14" offset="30" count="1"/>
+				<sub-item code="32" name="h_vent_ind" offset="31" count="1"/>
+			</item>
+			<item code="15" name="dsw2" is-pack="true">
+				<sub-item code="1" name="timer_mesh_in" offset="0" count="1"/>
+				<sub-item code="2" name="timer_mesh_q" offset="1" count="1"/>
+				<sub-item code="3" name="SAUOK" offset="2" count="1"/>
+				<sub-item code="4" name="brrs1_in" offset="3" count="1"/>
+				<sub-item code="5" name="brrs2_in" offset="4" count="1"/>
+				<sub-item code="6" name="brrs1_out" offset="5" count="1"/>
+				<sub-item code="7" name="brrs2_out" offset="6" count="1"/>
+				<sub-item code="8" name="h_zdv_out" offset="7" count="1"/>
+				<sub-item code="9" name="f_on" offset="8" count="1"/>
+				<sub-item code="10" name="f_avto" offset="9" count="1"/>
+				<sub-item code="11" name="h_cloh1_in" offset="10" count="1"/>
+				<sub-item code="12" name="h_cloh2_in" offset="11" count="1"/>
+				<sub-item code="13" name="h_cloh3_in" offset="12" count="1"/>
+				<sub-item code="14" name="h_zdv_cloh" offset="13" count="1"/>
+				<sub-item code="15" name="h_cloh1_sh" offset="14" count="1"/>
+				<sub-item code="16" name="h_cloh2_sh" offset="15" count="1"/>
+				<sub-item code="17" name="h_cloh3_sh" offset="16" count="1"/>
+				<sub-item code="18" name="h_doz_shod" offset="17" count="1"/>
+				<sub-item code="19" name="h_doz_enable" offset="18" count="1"/>
+				<sub-item code="20" name="h_hydro_on" offset="19" count="1"/>
+				<sub-item code="21" name="ft1" offset="20" count="1"/>
+				<sub-item code="22" name="f2" offset="21" count="1"/>
+				<sub-item code="23" name="f3" offset="22" count="1"/>
+				<sub-item code="24" name="h_sol_ok" offset="23" count="1"/>
+				<sub-item code="25" name="h_rsol_on" offset="24" count="1"/>
+			</item>
+			<item code="16" name="fq1_i" is-pack="false"/>
+			<item code="17" name="fq2_i" is-pack="false"/>
+			<item code="18" name="fq3_i" is-pack="false"/>
+			<item code="19" name="dd_out_rchv_i" is-pack="false"/>
+			<item code="20" name="dd_posle_skv_i" is-pack="false"/>
+			<item code="21" name="dd_compress_i" is-pack="false"/>
+			<item code="22" name="dd_do_aero_i" is-pack="false"/>
+			<item code="23" name="dd_posle_aero_i" is-pack="false"/>
+			<item code="24" name="si30rchv_r" is-pack="false"/>
+			<item code="25" name="si30skv_r" is-pack="false"/>
+			<item code="26" name="si30rchv_z" is-pack="false"/>
+			<item code="27" name="si30skv_z" is-pack="false"/>
+			<item code="28" name="BRRS1low" is-pack="false"/>
+			<item code="29" name="BRRS2low" is-pack="false"/>
+			<item code="30" name="B1CLOHlow" is-pack="false"/>
+			<item code="31" name="B2CLOHlow" is-pack="false"/>
+			<item code="32" name="B3CLOHlow" is-pack="false"/>
+			<item code="33" name="filtrloss" is-pack="false"/>
+			<item code="34" name="dd_otst_i" is-pack="false"/>
+			<item code="35" name="dd_otst5_i" is-pack="false"/>
+			<item code="36" name="dd_otst6_i" is-pack="false"/>
+			<item code="37" name="dd_otst_pch1_i" is-pack="false"/>
+			<item code="38" name="dd_otst_pch2_i" is-pack="false"/>
+			<item code="39" name="curr_vol" is-pack="false"/>
+			<item code="40" name="p_promyv" is-pack="false"/>
+			<item code="41" name="hyst_in" is-pack="false"/>
+			<item code="42" name="h_timer_mesh_et" is-pack="false"/>			
+			<item code="43" name="h_cu_time" is-pack="false"/>
+			<item code="44" name="h_cu_cv" is-pack="false"/>
+			<item code="45" name="hyst_on" is-pack="false"/>
+			<item code="46" name="hyst_off" is-pack="false"/>
+			<item code="47" name="work" is-pack="false"/>
+			<item code="48" name="pause" is-pack="false"/>
+			<item code="49" name="ust_vol" is-pack="false"/>
+			<item code="50" name="pmin_promyv" is-pack="false"/>
+			<item code="51" name="p_promyv_ust" is-pack="false"/>
+			<item code="52" name="pmax_promyv" is-pack="false"/>
+			<item code="53" name="hh_ust" is-pack="false"/>
+			<item code="54" name="mm_ust" is-pack="false"/>
+			<item code="55" name="timer_mesh_pt" is-pack="false"/>
+			<item code="56" name="brrs_indown_ust" is-pack="false"/>
+			<item code="57" name="brrs_inup_ust" is-pack="false"/>
+			<item code="58" name="h_prop" is-pack="false"/>
+			<item code="59" name="h_sh_el" is-pack="false"/>
+			<item code="60" name="h_clohup_ust" is-pack="false"/>
+			<item code="61" name="h_clohdown_ust" is-pack="false"/>
+			<item code="62" name="h_doz_sh" is-pack="false"/>
+			<item code="63" name="f_mesh_time" is-pack="false"/>
+			<item code="64" name="n_task" is-pack="false"/>
+			<item code="65" name="n_freq" is-pack="false"/>
+			<item code="66" name="sh_u" is-pack="false"/>
+			<item code="67" name="sh_n" is-pack="false"/>
+			<item code="68" name="dd_anr_i" is-pack="false"/>
+			<item code="69" name="dd_vgr_i" is-pack="false"/>
+			<item code="70" name="rchv1_m" is-pack="false"/>
+			<item code="71" name="rchv2_m" is-pack="false"/>
+			<item code="72" name="RCHV1verh_u" is-pack="false"/>
+			<item code="73" name="RCHV1sered_u" is-pack="false"/>
+			<item code="74" name="RCHV1niz_u" is-pack="false"/>
+			<item code="75" name="RCHV2verh_u" is-pack="false"/>
+			<item code="76" name="RCHV2sered_u" is-pack="false"/>
+			<item code="77" name="RCHV2niz_u" is-pack="false"/>
+			<item code="78" name="RCHV1_u" is-pack="false"/>
+			<item code="79" name="RCHV2_u" is-pack="false"/>
+			<item code="80" name="invsp_d" is-pack="false"/>
+			<item code="81" name="outvsp_d" is-pack="false"/>
+			<item code="82" name="invsp_f" is-pack="false"/>
+			<item code="83" name="outvsp_f" is-pack="false"/>
+			<item code="84" name="pid_out" is-pack="false"/>
+			<item code="85" name="pid_ust" is-pack="false"/>
+			<item code="86" name="pid_kp" is-pack="false"/>
+			<item code="87" name="pid_tn" is-pack="false"/>
+			<item code="88" name="pid_tv" is-pack="false"/>
+			<item code="89" name="pid_mi" is-pack="false"/>
+			<item code="90" name="pid_t" is-pack="false"/>
+			<item code="91" name="ust_set" is-pack="false"/>
+			<item code="92" name="DRK4_1_VOL" is-pack="false"/>
+			<item code="93" name="DRK4_1_Q" is-pack="false"/>
+			<item code="94" name="DRK4_2_VOL" is-pack="false"/>
+			<item code="95" name="DRK4_2_Q" is-pack="false"/>
+			<item code="96" name="nasos1wt" is-pack="false"/>
+			<item code="97" name="nasos2wt" is-pack="false"/>
+			<item code="98" name="nasos3wt" is-pack="false"/>
+			<item code="99" name="dsw1_el" is-pack="true">
+				<sub-item code="1" name="o1" offset="0" count="1"/>
+				<sub-item code="2" name="o2" offset="1" count="1"/>
+				<sub-item code="3" name="o3" offset="2" count="1"/>
+				<sub-item code="4" name="v1" offset="3" count="1"/>
+				<sub-item code="5" name="v2" offset="4" count="1"/>
+				<sub-item code="6" name="v3" offset="5" count="1"/>
+				<sub-item code="7" name="r1" offset="6" count="1"/>
+				<sub-item code="8" name="r2" offset="7" count="1"/>
+				<sub-item code="9" name="r3" offset="8" count="1"/>
+				<sub-item code="10" name="pump1" offset="9" count="1"/>
+				<sub-item code="11" name="pump2" offset="10" count="1"/>
+				<sub-item code="12" name="pump3" offset="11" count="1"/>
+				<sub-item code="13" name="trm_plc" offset="12" count="1"/>
+				<sub-item code="14" name="SH" offset="13" count="1"/>
+				<sub-item code="15" name="uf1l1" offset="14" count="1"/>
+				<sub-item code="16" name="uf1l2" offset="15" count="1"/>
+				<sub-item code="17" name="uf1l3" offset="16" count="1"/>
+				<sub-item code="18" name="uf1l4" offset="17" count="1"/>
+				<sub-item code="19" name="uf1l5" offset="18" count="1"/>
+				<sub-item code="20" name="uf1l6" offset="19" count="1"/>
+				<sub-item code="21" name="uf2l1" offset="20" count="1"/>
+				<sub-item code="22" name="uf2l2" offset="21" count="1"/>
+				<sub-item code="23" name="uf2l3" offset="22" count="1"/>
+				<sub-item code="24" name="uf2l4" offset="23" count="1"/>
+				<sub-item code="25" name="uf2l5" offset="24" count="1"/>
+				<sub-item code="26" name="uf2l6" offset="25" count="1"/>
+				<sub-item code="27" name="uf3l1" offset="26" count="1"/>
+				<sub-item code="28" name="uf3l2" offset="27" count="1"/>
+				<sub-item code="29" name="uf3l3" offset="28" count="1"/>
+				<sub-item code="30" name="uf3l4" offset="29" count="1"/>
+				<sub-item code="31" name="uf3l5" offset="30" count="1"/>
+				<sub-item code="32" name="uf3l6" offset="31" count="1"/>
+			</item>
+			<item code="100" name="dsw2_el" is-pack="true">
+				<sub-item code="1" name="pch1r" offset="0" count="1"/>
+				<sub-item code="2" name="pch1av" offset="1" count="1"/>
+				<sub-item code="3" name="pch1avto" offset="2" count="1"/>
+				<sub-item code="4" name="pch2r" offset="3" count="1"/>
+				<sub-item code="5" name="pch2av" offset="4" count="1"/>
+				<sub-item code="6" name="pch2avto" offset="5" count="1"/>
+				<sub-item code="7" name="pch3r" offset="6" count="1"/>
+				<sub-item code="8" name="pch3av" offset="7" count="1"/>
+				<sub-item code="9" name="pch3avto" offset="8" count="1"/>
+				<sub-item code="10" name="RCHV1niz" offset="9" count="1"/>
+				<sub-item code="11" name="RCHV1sered" offset="10" count="1"/>
+				<sub-item code="12" name="RCHV1verh" offset="11" count="1"/>
+				<sub-item code="13" name="ufo1_avto" offset="12" count="1"/>
+				<sub-item code="14" name="ufo2_avto" offset="13" count="1"/>
+				<sub-item code="15" name="ufo3_avto" offset="14" count="1"/>
+				<sub-item code="16" name="ufo1r" offset="15" count="1"/>
+				<sub-item code="17" name="ufo2r" offset="16" count="1"/>
+				<sub-item code="18" name="ufo3r" offset="17" count="1"/>
+				<sub-item code="19" name="RCHV2niz" offset="18" count="1"/>
+				<sub-item code="20" name="RCHV2sered" offset="19" count="1"/>
+				<sub-item code="21" name="RCHV2verh" offset="20" count="1"/>
+				<sub-item code="22" name="nya_avto" offset="21" count="1"/>
+				<sub-item code="23" name="niz_yama" offset="22" count="1"/>
+				<sub-item code="24" name="verh_yama" offset="23" count="1"/>
+				<sub-item code="25" name="nya" offset="24" count="1"/>
+				<sub-item code="26" name="RCHV1_d" offset="25" count="1"/>
+				<sub-item code="27" name="RCHV2_d" offset="26" count="1"/>
+			</item>
+		</group>
+	</data-source>
+</data-sources>

@@ -16,6 +16,18 @@ namespace techdata_dbagent {
 
         private static System.Threading.AutoResetEvent autoResetEvent;
 
+        /*static void Main(string[] args) {
+            ShowConsoleMessage("Start program");
+            isStop = false;
+            if (args.Length > 0) {
+                xmlConfigurationFileName = args[0];
+                ImportItemsFromXML instance = new ImportItemsFromXML(xmlConfigurationFileName);
+                instance.ImportData();
+                Console.WriteLine("Press any key to exit");
+                Console.ReadLine();
+            }
+        }*/
+
         static void Main(string[] args) {
             ShowConsoleMessage("Start program");
             isStop = false;
@@ -36,7 +48,6 @@ namespace techdata_dbagent {
             autoResetEvent = new System.Threading.AutoResetEvent(false);
             autoResetEvent.WaitOne();
         }
-
         private static void ShowConsoleMessage(string message) {
             Console.WriteLine(String.Format("{0}: {1}", DateTime.Now.ToString(), message));
         }

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="WINDOWS-1251"?>
 <data-sources>
-	<data-source code="1" type="opc" name="Advosol.SimDAServer.1" hostname="localhost" poll-delay="5000">
+	<data-source code="1" type="opc" name="Advosol.SimDAServer.1" hostname="localhost" poll-delay="500">
 		<group code="1" name="default">
 			<item code="1" name="SimulatedData.Random" is-pack="false"/>
 			<item code="2" name="SimulatedData.Ramp" is-pack="false"/>

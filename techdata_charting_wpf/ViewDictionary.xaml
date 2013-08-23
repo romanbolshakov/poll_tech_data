@@ -2,7 +2,10 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:view="clr-namespace:techdata_charting_wpf.View"
                     xmlns:viewModel="clr-namespace:techdata_charting_wpf.ViewModel">
-    <DataTemplate DataType="{x:Type viewModel:ChartViewModel}">
+    <DataTemplate DataType="{x:Type viewModel:ChartWorkspaceViewModel}">
         <view:ChartView/>
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type viewModel:ItemsWorkspaceViewModel}">
+        <view:ItemsWorkspace/>
     </DataTemplate>
 </ResourceDictionary>

@@ -6,7 +6,7 @@ using System.ComponentModel;
 
 
 namespace techdata_charting_wpf.ViewModel {
-    public abstract class ViewModelBase {
+    public abstract class ViewModelBase: INotifyPropertyChanged {
         public event PropertyChangedEventHandler PropertyChanged;
 
         protected void OnPropertyChanged(string propertyName) {

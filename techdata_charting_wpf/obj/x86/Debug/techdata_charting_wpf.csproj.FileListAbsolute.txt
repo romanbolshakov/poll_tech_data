@@ -44,3 +44,5 @@ D:\Documents\Projects\Github\PollTechData\techdata_charting_wpf\obj\x86\Debug\Ap
 D:\Documents\Projects\Github\PollTechData\techdata_charting_wpf\obj\x86\Debug\GeneratedInternalTypeHelper.g.cs
 D:\Documents\Projects\Github\PollTechData\techdata_charting_wpf\obj\x86\Debug\techdata_charting_wpf_MarkupCompile.lref
 D:\Documents\Projects\Github\PollTechData\techdata_charting_wpf\obj\x86\Debug\ViewDictionary.baml
+D:\Documents\Projects\Github\PollTechData\techdata_charting_wpf\obj\x86\Debug\View\ItemsWorkspace.baml
+D:\Documents\Projects\Github\PollTechData\techdata_charting_wpf\obj\x86\Debug\View\ItemsWorkspace.g.cs

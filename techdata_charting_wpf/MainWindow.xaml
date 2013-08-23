@@ -7,8 +7,8 @@
         WindowStartupLocation="CenterScreen">
     <Grid>
         <TabControl Margin="5" BorderBrush="Black" BorderThickness="1">
-            <TabItem Header="Данные" Content="{Binding Path=TechdataItems}"/>
-            <TabItem Header="Графики" Content="{Binding Path=TechdataChart}"/>
+            <TabItem Header="Текущее состояние параметров" Content="{Binding Path=TechdataItemsWorkspace}"/>
+            <TabItem Header="Мониторинг" Content="{Binding Path=TechdataChartWorkspace}"/>
         </TabControl>
     </Grid>
 </Window>

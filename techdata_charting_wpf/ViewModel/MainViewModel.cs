@@ -6,22 +6,22 @@ using System.Text;
 namespace techdata_charting_wpf.ViewModel {
     public class MainViewModel: ViewModelBase {
         
-        private ChartViewModel _chartViewModel;
-        public ChartViewModel TechdataChart {
+        private ChartWorkspaceViewModel _chartWorkspaceViewModel;
+        public ChartWorkspaceViewModel TechdataChartWorkspace {
             get {
-                if (_chartViewModel == null) {
-                    _chartViewModel = new ChartViewModel();
+                if (_chartWorkspaceViewModel == null) {
+                    _chartWorkspaceViewModel = new ChartWorkspaceViewModel();
                 }
-                return _chartViewModel; 
+                return _chartWorkspaceViewModel; 
             }
         }
 
-        private ItemsViewModel _itemsViewModel;
-        public ItemsViewModel TechdataItems {
+        private ItemsWorkspaceViewModel _itemsWorkspaceViewModel;
+        public ItemsWorkspaceViewModel TechdataItemsWorkspace {
             get {
-                if (_itemsViewModel == null)
-                    _itemsViewModel = new ItemsViewModel();
-                return _itemsViewModel; 
+                if (_itemsWorkspaceViewModel == null)
+                    _itemsWorkspaceViewModel = new ItemsWorkspaceViewModel();
+                return _itemsWorkspaceViewModel; 
             }
         }
 
